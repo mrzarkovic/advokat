@@ -1,0 +1,33 @@
+<table id="table" class="mjaumjau-table">
+	<thead>
+	<tr data-role="players-row" data-status="editing" class="active">
+		<th data-role="player-col" data-id="1">
+			<input type="text" value="" data-role="input-text">
+		</th>
+		<th data-role="controls-col" class="controls">
+			<input type="button" value="Sačuvaj" onclick="table.saveRow(this)" class="finish-control">
+			<input type="button" value="Izmeni" onclick="table.editRow(this)" class="edit-control">
+		</th>
+	</tr>
+	</thead>
+	<tbody>
+	<!-- Row -->
+	<tr data-role="game-row" data-status="active" data-id="1" class="active">
+		<!-- Input -->
+		<td data-role="game-col" data-id="1">
+			<input type="number" value="" data-role="input-number">
+		</td>
+		<!-- Controls -->
+		<td data-role="controls-col" class="controls">
+			<input type="button" value="Novi krug" onclick="table.saveRow(this)" class="finish-control">
+			<input type="button" value="Izmeni" onclick="table.editRow(this)" class="edit-control">
+		</td>
+	</tr>
+	<!-- Results -->
+	<tr data-role="results">
+		<td data-role="result-col" data-id="1">
+			<div data-role="disabled-input" class=""></div>
+		</td>
+	</tr>
+	</tbody>
+</table>

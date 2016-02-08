@@ -1,0 +1,460 @@
+@import url(https://fonts.googleapis.com/css?family=Asap:400,700&subset=latin,latin-ext);
+
+*, html, body {
+	font-family: 'Asap', sans-serif;
+	color: #333;
+	font-size: 14px;
+	padding: 0;
+	margin: 0;
+}
+
+html {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+*, *:before, *:after {
+	-webkit-box-sizing: inherit;
+	-moz-box-sizing: inherit;
+	box-sizing: inherit;
+}
+
+body {
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	color: #000;
+}
+
+.header {
+	position: relative;
+	z-index: 10;
+}
+
+.header > .content {
+	padding: 10px 10px 60px 10px;
+}
+
+.header > .content > a.logo {
+	font-size: 38px;
+	font-weight: bold;
+}
+
+.header > .content > a.logo > small {
+	font-size: 28px;
+	color: #666;
+	font-weight: normal;
+}
+
+section.main {
+	background: #fff;
+	padding: 10px;
+}
+
+section.main > h1 {
+	font-size: 26px;
+	padding-bottom: 10px;
+	margin-bottom: 5px;
+	border-bottom: 1px solid #eee;
+}
+
+.content {
+	margin: 0 auto;
+	max-width: 1200px;
+}
+
+.main {
+	position: relative;
+}
+
+/* NAVIGATION */
+
+.header .navigation {
+	position: absolute;
+	bottom: 0;
+}
+
+nav {
+	display: block;
+	width: 100%;
+	background: rgba(255, 255, 255, 0.8);
+	padding: 10px;
+}
+
+nav ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+nav ul li {
+	display: block;
+	float: left;
+}
+
+nav ul li.admin-login {
+	float: right;
+}
+
+nav ul li a {
+	display: block;
+	padding: 5px 10px;
+	color: #333;
+	border-radius: 3px;
+}
+
+nav ul li a:hover {
+	background: #fff;
+	box-shadow: 0px 0px 3px #ccc;
+}
+
+/* end of NAVIGATION */
+
+/* MAIN */
+
+.main .about h1 {
+	margin: 10px 0;
+	font-size: 24px;
+}
+
+.main .about p {
+	padding: 10px;
+}
+
+/* end of MAIN */
+
+/* FORM FIELDS */
+
+.form-field {
+	margin: 10px 0;
+}
+
+.form-field input[type="text"],
+.form-field input[type="password"],
+.form-field input[type="email"] {
+	padding: 3px 5px;
+	width: 300px;
+	border: 1px solid #bbb;
+	border-radius: 3px;
+}
+
+.form-field label {
+	display: block;
+	padding: 5px 0;
+}
+
+.form-field textarea {
+	padding: 3px 5px;
+	max-width: 600px;
+	width: 600px;
+	min-height: 200px;
+	border: 1px solid #bbb;
+	border-radius: 3px;
+}
+
+.form-field .image-preview {
+	padding: 10px 0;
+}
+
+.form-field .image-preview img {
+	width: 300px;
+	border-radius: 5px;
+}
+
+.contact .form-field textarea {
+	max-width: 500px;
+	min-height: 100px;
+}
+
+/* end of FORM FIELDS */
+
+/* ADMIN */
+
+.admin-submenu {
+	list-style-type: none;
+	margin: 10px 0;
+	padding: 0;
+}
+
+.admin-submenu li {
+	float: left;
+}
+
+.admin-submenu li a {
+	display: inline-block;
+	border: 0;
+	margin: 0 5px 0 0;
+	font-size: 14px;
+	color: #fff;
+	padding: 5px 10px;
+	border-radius: 3px;
+	background: rgb(25, 132, 158);
+}
+
+.admin-submenu a:hover {
+	background: rgb(61, 155, 177);
+	cursor: pointer;
+}
+
+.admin-destinations .destination {
+	margin: 10px 0;
+	padding: 5px;
+}
+
+.admin-destinations .destination:hover {
+	background: #f7f7f7;
+}
+
+.admin-destinations .destination h1 * {
+	color: #666;
+	font-weight: normal;
+}
+
+.admin-destinations .destination a {
+	font-size: 14px;
+	display: inline-block;
+	margin: 3px 5px 0 0;
+	text-decoration: underline;
+	color: rgb(25, 132, 158);
+}
+
+.admin-destinations .destination a:hover {
+	color: rgb(189, 52, 52);
+}
+
+.reservations ol {
+	margin: 10px 0;
+	padding: 0 0 0 20px;
+}
+
+.reservations ol li {
+	padding: 5px 10px;
+}
+
+.reservations ol li a {
+	display: inline-block;
+	font-size: 14px;
+	padding: 5px 0;
+	text-decoration: underline;
+	color: rgb(25, 132, 158);
+}
+
+.reservations ol li a:hover {
+	color: rgb(189, 52, 52);
+}
+
+.reservations ol li:hover {
+	background: #f7f7f7;
+}
+
+.control {
+	float: right;
+}
+
+.goback:hover {
+	cursor: pointer;
+}
+
+/* end of ADMIN */
+
+/* FOOTER */
+
+.footer .content {
+	padding: 10px;
+	text-align: center;
+}
+
+/* end of FOOTER */
+
+/* PAGINATION */
+
+.pagination {
+	text-align: center;
+}
+
+.pagination ul {
+	display: inline-block;
+	list-style-type: none;
+	margin: 10px 0;
+	padding: 0;
+}
+
+.pagination ul li {
+	float: left;
+}
+
+.pagination ul li a {
+	display: inline-block;
+	padding: 5px 10px;
+}
+
+.pagination ul li a:hover {
+	color: rgb(25, 132, 158);
+}
+
+/* end of PAGINATION */
+
+.goback {
+	display: inline-block;
+	border: 0;
+	margin: 10px 5px 0;
+	font-size: 14px;
+	color: #fff;
+	padding: 5px 10px;
+	border-radius: 3px;
+	background: rgb(25, 132, 158);
+}
+
+.notice {
+	margin: 5px 0;
+	font-style: italic;
+	color: rgb(25, 132, 158);
+	font-size: 18px;
+}
+
+.contact-map {
+	float: right;
+}
+
+/* CLEARFIX */
+
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+}
+
+.clearfix {
+	display: inline-block;
+}
+
+/* start commented backslash hack \*/
+* html .clearfix {
+	height: 1%;
+}
+
+.clearfix {
+	display: block;
+}
+
+/* close commented backslash hack */
+
+/* end of CLEARFIX */
+
+/* LOGZ TABLE */
+.logz-table {
+	margin-top: 10px;
+	width: 100%;
+}
+
+.logz-table th {
+	height: 40px;
+}
+
+.logz-table .active .controls-col .finish-control,
+.logz-table .controls-col .edit-control {
+	display: inline;
+}
+
+.logz-table .controls-col .finish-control,
+.logz-table .active .controls-col .edit-control {
+	display: none;
+}
+
+.template {
+	display: none;
+}
+
+.logz-table .disabled-input,
+.logz-table input {
+	text-align: center;
+}
+
+.logz-table .button {
+	background: transparent;
+	height: 30px;
+	width: 48%;
+	padding: 5px 10px;
+	border: 1px solid #ccc;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+
+.add-player {
+	background: transparent;
+	height: 30px;
+	padding: 5px 10px;
+	border: 1px solid #ccc;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+
+.add-player:hover,
+.logz-table .button:hover {
+	cursor: pointer;
+}
+
+.logz-table .entry-no-col {
+	width: 65px;
+	text-align: center;
+}
+
+.logz-table .controls-col {
+	text-align: center;
+	width: 140px;
+}
+
+.logz-table .date-col {
+	width: 150px;
+}
+
+.logz-table td.date-col,
+.logz-table td.entry-no-col{
+	text-align: center;
+	color: #777;
+}
+
+.logz-table input[type="text"],
+.logz-table input[type="number"] {
+	border: 0px solid #ccc;
+	background: #f6f6f6;
+}
+
+.logz-table input[type="text"],
+.logz-table input[type="number"],
+.logz-table .disabled-input {
+	font-size: 14px;
+	width: 100%;
+	padding: 6px 5px;
+	text-align: left;
+}
+
+.logz-table input[type="number"] {
+	line-height: 26px;
+}
+
+.logz-table th:first-of-type input[type="text"],
+.logz-table td:first-of-type input[type="number"],
+.logz-table th:first-of-type .disabled-input{
+	border-radius: 3px 0 0 3px;
+}
+
+.logz-table .result .disabled-input {
+	font-weight: bold;
+}
+
+.logz-table .player .disabled-input {
+	background-color: #eaeaea;
+}
+
+/* end of LOGZ TABLE */
