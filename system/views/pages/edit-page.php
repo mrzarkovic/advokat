@@ -1,23 +1,17 @@
 <link rel="stylesheet" type="text/css" href="/css/form.css"/>
 <script src="/js/tinymce/tinymce.min.js"></script>
 <section class="content">
-	<h1>Izmeni stranicu</h1>
+	<h1>Izmeni stranicu '<?php echo $page->title_sr; ?>'</h1>
 	<?php if (isset($success) && $success == true) : ?>
-		<div class="alert">Uspešno ste izmenili stranicu.</div>
+		<div class="alert alert-success">Uspešno ste izmenili stranicu.</div>
 	<?php endif; ?>
 	<form action="/admin/edit-page/<?php echo $page->id; ?>" method="post">
 		<div class="tabbed-form sr" data-role="tabbed_form">
 			<div class="tab_title sr" data-role="tab" data-value="sr">Srpski</div>
 			<div class="tab_title en" data-role="tab" data-value="en">English</div>
 			<div class="tab sr_tab">
-				<div class="form-field">
-					<label for="title_sr">Naslov:</label>
-					<input type="text" name="title_sr" id="title_sr" placeholder="Naslov" value="<?php echo $page->title_sr; ?>">
-				</div>
-				<div class="form-field">
-					<label for="body_sr">Sadržaj stranice:</label>
-					<textarea name="body_sr" id="body_sr"><?php echo $page->body_sr; ?></textarea>
-				</div>
+				<?php generate_form_field("text", "title_sr", "Naslov", $page->title_sr, $errors, "Naslov stranice"); ?>
+				<?php generate_form_field("textarea", "body_sr", "Sadržaj stranice", $page->body_sr, $errors); ?>
 			</div>
 			<div class="tab en_tab">
 				<div class="form-field">

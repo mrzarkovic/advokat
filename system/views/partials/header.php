@@ -5,7 +5,7 @@
 			<small><?php echo $this->page_name; ?></small>
 		</a>
 	</div>
-	<nav class="navigation">
+	<nav class="navigation main">
 		<ul class="clearfix">
 			<li>
 				<a href="/">Početna</a>

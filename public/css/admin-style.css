@@ -8,7 +8,15 @@
 }
 
 .admin-menu {
-	width: 300px;
+	min-width: 160px;
+}
+
+.admin-nav ul li ul li {
+	padding-left: 10px;
+}
+
+.admin-nav ul li ul li a {
+	font-size: 12px;
 }
 
 .admin-content {
@@ -21,6 +29,7 @@
 
 .admin-content h1 {
 	font-size: 26px;
+	margin-bottom: 10px;
 }
 
 .admin-content .pages-list {
@@ -34,4 +43,13 @@
 
 .admin-content .pages-list a:hover {
 	color: #6495ed;
+}
+
+.form-error {
+	color: #ff0000;
+}
+
+.form-error + .form-field {
+	border: 1px solid #ff0000;
+	padding: 5px;
 }

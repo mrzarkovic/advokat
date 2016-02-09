@@ -33,7 +33,8 @@ class Admin_pages extends Admin_controller {
 		$this->template = "pages/add-page";
 
 		if (isset($_POST['submit'])) {
-			if ($errors = $this->check_input()) {
+			$errors = $this->check_input();
+			if (is_array($errors) && !empty($errors)) {
 				$this->to_tpl['errors'] = $errors;
 			} else {
 				$page = new Page();
@@ -61,7 +62,8 @@ class Admin_pages extends Admin_controller {
 			$this->template = "pages/edit-page";
 
 			if (isset($_POST['submit'])) {
-				if ($errors = $this->check_input()) {
+				$errors = $this->check_input();
+				if (is_array($errors) && !empty($errors)) {
 					$this->to_tpl['errors'] = $errors;
 				} else {
 					$page->title_sr = post_string('title_sr');
@@ -101,10 +103,10 @@ class Admin_pages extends Admin_controller {
 	 */
 	private function check_input() {
 		$error_array = array();
-		if (!isset($_POST['title_sr'])) {
+		if (!isset($_POST['title_sr']) || empty($_POST['title_sr'])) {
 			$error_array['title_sr'] = "Morate uneti naslov stranice.";
 		}
-		if (!isset($_POST['body_sr'])) {
+		if (!isset($_POST['body_sr']) || empty($_POST['body_sr'])) {
 			$error_array['body_sr'] = "Morate uneti sadržaj stranice.";
 		}
 
