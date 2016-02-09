@@ -9,17 +9,48 @@
     <database-model serializer="dbm" rdbms="MYSQL" format-version="2.4">
       <schema id="1" name="attorney"/>
       <table id="2" parent="1" name="users"/>
-      <column id="3" parent="2" name="id">
+      <table id="3" parent="1" name="pages"/>
+      <column id="4" parent="2" name="id">
         <mandatory>1</mandatory>
         <data-type>int(11)</data-type>
       </column>
-      <column id="4" parent="2" name="username">
+      <column id="5" parent="2" name="username">
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="5" parent="2" name="password">
+      <column id="6" parent="2" name="password">
         <data-type>varchar(255)</data-type>
       </column>
-      <key id="6" parent="2" name="PRIMARY">
+      <key id="7" parent="2" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="8" parent="3" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="9" parent="3" name="title_sr">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="10" parent="3" name="title_en">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="11" parent="3" name="body_sr">
+        <data-type>text</data-type>
+      </column>
+      <column id="12" parent="3" name="body_en">
+        <data-type>text</data-type>
+      </column>
+      <column id="13" parent="3" name="date_created">
+        <data-type>datetime</data-type>
+      </column>
+      <column id="14" parent="3" name="published">
+        <data-type>tinyint(1)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="15" parent="3" name="order">
+        <data-type>int(3)</data-type>
+      </column>
+      <key id="16" parent="3" name="PRIMARY">
         <columns>id</columns>
         <primary>1</primary>
       </key>
