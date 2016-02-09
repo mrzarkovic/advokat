@@ -101,6 +101,7 @@ class Route {
 		$call = new \Lamework\Controller\Error_404();
 		$this->class = $call;
 		$this->method = "index";
+		$this->arguments = $function_arguments;
 		return;
 		//throw new Exception( 'Error 404: Page not found.' );
 	}

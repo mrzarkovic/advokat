@@ -14,14 +14,8 @@
 				<?php generate_form_field("textarea", "body_sr", "Sadržaj stranice", "", $errors); ?>
 			</div>
 			<div class="tab en_tab">
-				<div class="form-field">
-					<label for="title_en">Title:</label>
-					<input type="text" name="title_en" id="title_en" placeholder="Title">
-				</div>
-				<div class="form-field">
-					<label for="body_en">Page content:</label>
-					<textarea name="body_en" id="body_en"></textarea>
-				</div>
+				<?php generate_form_field("text", "title_en", "Title", "", $errors, "Title of the page"); ?>
+				<?php generate_form_field("textarea", "body_en", "Content", "", $errors); ?>
 			</div>
 		</div>
 		<div class="form-field">

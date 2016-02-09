@@ -12,7 +12,7 @@
 			</li>
 			<?php foreach ($pages as $page) : ?>
 				<li>
-					<a href="<?php echo $page->getLanguageUrl(); ?>"><?php echo $page->getLanguageTitle(); ?></a>
+					<a href="<?php echo $page->get_language_url($this->get_language()); ?>"><?php echo $page->get_language_title($this->get_language()); ?></a>
 				</li>
 			<?php endforeach; ?>
 			<?php

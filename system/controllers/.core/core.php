@@ -2,6 +2,8 @@
 
 namespace Lamework\Controller;
 
+use Lamework\Model\Page;
+
 if (!defined('BASEPATH')) exit('No direct script access allowed');
 
 /**
@@ -69,13 +71,22 @@ class Core {
 		$this->route = new \Route();
 		$this->to_tpl = array();
 		$this->msg_to_user = "";
-		static::$main_template = "main";
 		$this->template = "";
+		static::$main_template = "main";
 		$this->site_name = "Attorney";
 		$this->page_name = "at Law";
+
+		// Set the footer year
 		$footer_year = new \DateTime("now");
 		$this->to_tpl['footer_year'] = $footer_year->format('Y');
-		$this->to_tpl['pages'] = array();
+
+		// Get all the pages
+		$pages = new Page();
+		$pages->fetchAllByFieldValue("published", 1);
+		$this->to_tpl['pages'] = $pages->list;
+
+		// Set the default language
+		$this->set_language("sr");
 	}
 
 	/**
@@ -111,6 +122,14 @@ class Core {
 			static::$language = $lang;
 		else
 			static::$language = "sr";
+	}
+
+	/**
+	 * Get the current language
+	 * @return string
+	 */
+	public function get_language() {
+		return static::$language;
 	}
 
 	/**

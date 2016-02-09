@@ -2,6 +2,8 @@
 
 namespace Lamework\Controller;
 
+use Lamework\Model\Page;
+
 if (!defined('BASEPATH')) exit('No direct script access allowed');
 
 /**
@@ -30,6 +32,12 @@ class Pages extends Core {
 	public function show($lang = "", $permalink = "") {
 		if (isset($lang) && array_key_exists($lang, self::$availableLanguages)) {
 			// TODO: Resolve the requested page by permalink
+			$this->set_language($lang);
+			$this->template = "single-page";
+			$page = new Page();
+			$page = $page->getById($permalink);
+			$this->to_tpl['lang'] = $lang;
+			$this->to_tpl['page'] = $page;
 		} else {
 			$this->to_tpl['error'] = "Stranica ne postoji.";
 			$this->template = "404";
