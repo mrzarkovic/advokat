@@ -29,6 +29,7 @@ class Repository
             if ($type == "int") $this->$field = (int)(isset($row[$field]) ? $row[$field] : 0);
             else if ($type == "string") $this->$field = (isset($row[$field]) ? $row[$field] : "");
             else if ($type == "date") $this->$field = (isset($row[$field]) ? new \DateTime($row[$field]) : new \DateTime("now"));
+            else if ($type == "bool") $this->$field = (isset($row[$field]) ? $row[$field] : 0);
         }
     }
 
@@ -83,7 +84,7 @@ class Repository
      * @return bool
      * @throws \Exception
      */
-    public function fetchAllByFieldValue($field_name = "", $value = "")
+    public function fetchAllByFieldValue($field_name = "", $value)
     {
         try {
             $stmt = self::$db->prepare("SELECT * FROM " . static::$table_name . " WHERE `" . $field_name . "`=:value");
@@ -139,13 +140,13 @@ class Repository
     }
 
     /**
-     * Fetch the record from the database
+     * Get the record from the database
      * based on the provided id
      * @param int $id
      * @throws \Exception
      * @return bool|Object
      */
-    public function fetchById($id = 0)
+    public function getById($id = 0)
     {
         try {
             $stmt = self::$db->prepare("SELECT * FROM " . static::$table_name . " WHERE `" . static::$id_field . "`=:id");

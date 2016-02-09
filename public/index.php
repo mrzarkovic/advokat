@@ -1,20 +1,24 @@
 <?php
 
-   define( 'BASEPATH', str_replace( "\\", "/", "../system" ) );
+/**
+ * LameWork is a PHP Framework that uses MVC design pattern
+ * Version: 0.02
+ * Author: Milos Zarkovic (mzarkovicm@gmail.com)
+ */
 
-   // Include startup scripts
-   require_once( BASEPATH . '/includes/start-up.php' );
-   // Include routes
-   require_once( BASEPATH . '/config/routes.php' );
+define('BASEPATH', str_replace("\\", "/", "../system"));
 
-   // Exception handling
-   set_exception_handler( 'exception_handler' );
-   function exception_handler( $exception )
-   {
-     echo $msg = $exception->getMessage();
-     //include(BASEPATH .' /views/404.php');
-   }
+// Include startup scripts
+require_once(BASEPATH . '/includes/start-up.php');
+// Include routes
+require_once(BASEPATH . '/config/routes.php');
 
-   $core->start();
+// Exception handling
+set_exception_handler('exception_handler');
+function exception_handler(Exception $exception) {
+	echo $msg = $exception->getMessage();
+}
+
+$core->start();
 
 ?>

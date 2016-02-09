@@ -23,6 +23,11 @@ html {
 body {
 }
 
+.wrapper {
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
 a {
 	text-decoration: none;
 }
@@ -36,16 +41,12 @@ a:hover {
 	z-index: 10;
 }
 
-.header > .content {
-	padding: 10px 10px 60px 10px;
-}
-
-.header > .content > a.logo {
+.content > a.logo {
 	font-size: 38px;
 	font-weight: bold;
 }
 
-.header > .content > a.logo > small {
+.content > a.logo > small {
 	font-size: 28px;
 	color: #666;
 	font-weight: normal;
@@ -64,8 +65,7 @@ section.main > h1 {
 }
 
 .content {
-	margin: 0 auto;
-	max-width: 1200px;
+	padding: 10px;
 }
 
 .main {

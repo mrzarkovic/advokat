@@ -96,3 +96,38 @@ function load_files( $path ) {
 	}
 	return true;
 }
+
+/**
+ * Get the string value from the $_POST array
+ * @param $string_name
+ * @return mixed
+ */
+function post_string($string_name) {
+	$string = $_POST[$string_name];
+	settype($string, "string");
+	return $string;
+}
+
+/**
+ * Get the integer value from the $_POST array
+ * @param $integer_name
+ * @return mixed
+ */
+function post_int($integer_name) {
+	$integer = $_POST[$integer_name];
+	settype($integer, "integer");
+	return $integer;
+}
+
+/**
+ * Get the bool value from the $_POST array
+ * @param $boolean_name
+ * @return mixed
+ */
+function post_bool($boolean_name) {
+	$boolean = $_POST[$boolean_name];
+	if ($boolean == "true")
+		return true;
+
+	return false;
+}

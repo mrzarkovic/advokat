@@ -1,0 +1,37 @@
+.fluid-holder {
+	display: table;
+}
+
+.fluid-holder .cell {
+	display: table-cell;
+	vertical-align: top;
+}
+
+.admin-menu {
+	width: 300px;
+}
+
+.admin-content {
+	width: 100%;
+}
+
+.admin-controls {
+	float: right;
+}
+
+.admin-content h1 {
+	font-size: 26px;
+}
+
+.admin-content .pages-list {
+	padding-left: 20px;
+}
+
+.admin-content .pages-list a {
+	display: inline-block;
+	padding: 3px 5px;
+}
+
+.admin-content .pages-list a:hover {
+	color: #6495ed;
+}

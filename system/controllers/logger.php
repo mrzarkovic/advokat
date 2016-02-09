@@ -20,7 +20,7 @@ class Logger extends Core
     public function login()
     {
         if (!empty($_POST)) {
-            $this->_login_user();
+            $this->login_user();
         }
         $this->template = "login";
     }
@@ -29,7 +29,7 @@ class Logger extends Core
      * Try to log in the user
      * @return bool
      */
-    private function _login_user()
+    private function login_user()
     {
         // Check input
         if (($_POST['username'] == '') || ($_POST['password'] == '')) {

@@ -15,6 +15,12 @@ class Core {
 	public $msg_to_user;
 
 	/**
+	 * Stores ahe main template name
+	 * @var string
+	 */
+	public static $main_template;
+
+	/**
 	 * Stores a template name
 	 * @var string
 	 */
@@ -48,6 +54,7 @@ class Core {
 		$this->route = new \Route();
 		$this->to_tpl = array();
 		$this->msg_to_user = "";
+		static::$main_template = "main";
 		$this->template = "";
 		$this->site_name = "Attorney";
 		$this->page_name = "at Law";
@@ -58,13 +65,25 @@ class Core {
 	/**
 	 * Include a template file
 	 * @param  string $filename
+	 * @throws \Exception
 	 */
 	public function load_template($filename = "") {
 		foreach ($this->to_tpl as $variable => $value) {
 			$$variable = $value;
 		}
+		if (!file_exists(BASEPATH . "/views/" . $filename . ".php"))
+			throw new \Exception('Template error. File `' . $filename . '` does not exist.');
+		else
+			require_once(BASEPATH . "/views/" . $filename . ".php");
 
-		include(BASEPATH . "/views/" . $filename . ".php");
+	}
+
+	/**
+	 * Set the main template
+	 * @param string $template_name
+	 */
+	public function set_main_template($template_name = "") {
+		static::$main_template = $template_name;
 	}
 
 	/**
@@ -97,8 +116,7 @@ class Core {
 		$this->title = $this->site_name . " | " . $class->page_name;
 		// Set the message for a user
 		$this->msg_to_user = $class->msg_to_user;
-
 		// Load the main template
-		$this->load_template("main");
+		$this->load_template(static::$main_template);
 	}
 }

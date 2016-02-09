@@ -1,0 +1,26 @@
+.tabbed-form {
+	position: relative;
+}
+
+.tabbed-form .tab {
+	display: none;
+}
+
+.tabbed-form .tab_title {
+	display: inline;
+}
+
+.tabbed-form.sr .tab_title.sr {
+	font-weight: bold;
+}
+
+.tabbed-form.en .tab_title.en {
+	font-weight: bold;
+}
+
+.tabbed-form.sr .sr_tab {
+	display: block;
+}
+.tabbed-form.en .en_tab {
+	display: block;
+}
