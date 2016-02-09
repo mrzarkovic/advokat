@@ -131,3 +131,14 @@ function post_bool($boolean_name) {
 
 	return false;
 }
+
+/**
+ * Get JSON list of images in pages directory
+ * @return array
+ */
+function get_pages_images_list() {
+	$files = scandir(BASEPATH . "/../public/images/pages");
+	array_shift($files); // remove "."
+	array_shift($files); // remove ".."
+	return $files;
+}

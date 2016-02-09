@@ -15,12 +15,6 @@ class Core {
 	public $msg_to_user;
 
 	/**
-	 * Stores ahe main template name
-	 * @var string
-	 */
-	public static $main_template;
-
-	/**
 	 * Stores a template name
 	 * @var string
 	 */
@@ -50,6 +44,27 @@ class Core {
 	 */
 	public $route;
 
+	/**
+	 * The website language
+	 * @var string
+	 */
+	public static $language;
+
+	/**
+	 * Stores ahe main template name
+	 * @var string
+	 */
+	public static $main_template;
+
+	/**
+	 * List of the available languages
+	 * @var array
+	 */
+	public static $availableLanguages = array(
+		"sr" => "Srpski",
+		"en" => "English"
+	);
+
 	public function __construct() {
 		$this->route = new \Route();
 		$this->to_tpl = array();
@@ -60,6 +75,7 @@ class Core {
 		$this->page_name = "at Law";
 		$footer_year = new \DateTime("now");
 		$this->to_tpl['footer_year'] = $footer_year->format('Y');
+		$this->to_tpl['pages'] = array();
 	}
 
 	/**
@@ -87,6 +103,17 @@ class Core {
 	}
 
 	/**
+	 * Set the website language
+	 * @param string $lang
+	 */
+	public function set_language($lang = "") {
+		if (array_key_exists($lang, static::$availableLanguages))
+			static::$language = $lang;
+		else
+			static::$language = "sr";
+	}
+
+	/**
 	 * Add a route to the Route object
 	 * @param string $route  URI
 	 * @param string $action Controller and method
@@ -106,12 +133,18 @@ class Core {
 		$class = new $this->route->class();
 		$method = $this->route->method;
 		$args = $this->route->arguments;
-		$class->$method($args);
+		call_user_func_array(array($class, $method), $args);
+		//$class->$method($args);
 
 		// Set the variables to use in the template
 		$this->to_tpl = $class->to_tpl;
 		// Set the child template name
-		$this->template = ($class->template) ? $class->template : "404";
+		if (!$class->template) {
+			$this->to_tpl['error'] = "Nije definisan template.";
+			$this->template = "404";
+		} else {
+			$this->template = $class->template;
+		}
 		// Set the page title
 		$this->title = $this->site_name . " | " . $class->page_name;
 		// Set the message for a user

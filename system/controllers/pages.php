@@ -1,12 +1,11 @@
 <?php
 
 namespace Lamework\Controller;
-use Lamework\Model\Log;
 
 if (!defined('BASEPATH')) exit('No direct script access allowed');
 
 /**
- * Page controller
+ * Pages controller
  */
 class Pages extends Core {
 	public function __construct() {
@@ -20,6 +19,21 @@ class Pages extends Core {
 	public function home() {
 		$this->template = "home";
 
+		return;
+	}
+
+	/**
+	 * Show a page for the language
+	 * @param string $lang
+	 * @param string $permalink
+	 */
+	public function show($lang = "", $permalink = "") {
+		if (isset($lang) && array_key_exists($lang, self::$availableLanguages)) {
+			// TODO: Resolve the requested page by permalink
+		} else {
+			$this->to_tpl['error'] = "Stranica ne postoji.";
+			$this->template = "404";
+		}
 		return;
 	}
 

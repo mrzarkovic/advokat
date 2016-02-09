@@ -2,8 +2,6 @@
 
 namespace Lamework\Controller;
 
-use Lamework\Model\Page;
-
 if (!defined('BASEPATH')) exit('No direct script access allowed');
 
 /**

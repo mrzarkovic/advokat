@@ -60,15 +60,14 @@
 	}
 	tinymce.init({
 		selector: "textarea",
-		plugins: "image jbimages",
+		plugins: "image jbimages paste",
 		menubar: "edit format insert",
 		toolbar: "undo redo | styleselect | bold italic | alignleft aligncenter alignright | image jbimages",
-		image_list: [
-			{title: 'Dog', value: 'mydog.jpg'},
-			{title: 'Cat', value: 'mycat.gif'}
-		],
+		image_list: "/list-of-images",
 		image_description: false,
 		image_dimensions: false,
-		relative_urls: false
+		relative_urls: false,
+		oninit : "setPlainText",
+		height : 400
 	});
 </script>
