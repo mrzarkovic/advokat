@@ -113,6 +113,9 @@ class Core {
 
 		// Set the default language
 		$this->set_language("sr");
+
+		// TODO: PHPMailer with Gmail
+		// http://www.sitepoint.com/sending-emails-php-phpmailer/
 	}
 
 	/**
