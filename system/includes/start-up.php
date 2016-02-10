@@ -9,6 +9,8 @@ require_once(dirname(dirname(__FILE__)) . '/includes/helpers.php');
 $models_dir = BASEPATH . "/models";
 load_files($models_dir);
 // Controllers
+require_once(dirname(dirname(__FILE__)) . '/controllers/.core/core.php');
+require_once(dirname(dirname(__FILE__)) . '/controllers/.core/admin_controller.php');
 $controllers_dir = BASEPATH . "/controllers";
 load_files($controllers_dir);
 // Initialize the Core controller

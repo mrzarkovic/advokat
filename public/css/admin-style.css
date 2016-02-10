@@ -44,12 +44,3 @@
 .admin-content .pages-list a:hover {
 	color: #6495ed;
 }
-
-.form-error {
-	color: #ff0000;
-}
-
-.form-error + .form-field {
-	border: 1px solid #ff0000;
-	padding: 5px;
-}

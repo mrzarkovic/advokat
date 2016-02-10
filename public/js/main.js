@@ -4,7 +4,22 @@ $(document).ready(function(){
          return false;
       }
    });
+
+    $("[data-role='tab']").click(function(){
+        var val = $(this).data("value");
+        if (val == "sr")
+            showSrTab();
+        else if (val == "en")
+            showEnTab();
+    });
 });
+
+function showSrTab() {
+    $("[data-role='tabbed_form']").removeClass("en").addClass("sr");
+}
+function showEnTab() {
+    $("[data-role='tabbed_form']").removeClass("sr").addClass("en");
+}
 
 window.goBack = function (e){
     var defaultLocation = "http://www.mysite.com";

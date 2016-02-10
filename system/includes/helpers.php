@@ -148,7 +148,15 @@ function generate_form_field($type = "text", $field_name = "name", $label_text =
 		$value = $_POST[$field_name];
 	}
 	if (isset($errors[$field_name])) {
-		echo "<div class=\"form-error\">" . $errors[$field_name] . "</div>";
+		echo "<div class=\"form-error\">";
+		if (is_array($errors[$field_name])) {
+			foreach ($errors[$field_name] as $field_error) {
+				echo $field_error . "<br>";
+			}
+		} else {
+			echo $errors[$field_name];
+		}
+		echo "</div>";
 	}
 	echo "<div class=\"form-field\">";
 	echo "<label for=\"" . $field_name . "\">" . $label_text . ":</label>";
@@ -156,6 +164,8 @@ function generate_form_field($type = "text", $field_name = "name", $label_text =
 		echo "<input type=\"text\" name=\"" . $field_name . "\" id=\"" . $field_name . "\" placeholder=\"" . $placeholder . "\" value=\"" . $value . "\">";
 	} elseif ($type == "textarea") {
 		echo "<textarea name=\"" . $field_name . "\" id=\"" . $field_name . "\">$value</textarea>";
+	} elseif ($type == "file") {
+		echo "<input type=\"file\" name=\"" . $field_name . "\" id=\"" . $field_name . "\">";
 	}
 	echo "</div>";
 }

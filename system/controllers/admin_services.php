@@ -110,7 +110,7 @@ class Admin_services extends Admin_controller {
 	}
 
 	/**
-	 * Check the submited input
+	 * Check the submitted input
 	 * @return array
 	 */
 	private function check_input() {

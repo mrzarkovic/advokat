@@ -35,3 +35,14 @@
 .tabbed-form.en .en_tab {
 	display: block;
 }
+
+.form-error {
+	padding: 5px 0;
+	margin-bottom: -10px;
+	color: #ff0000;
+}
+
+.form-error + .form-field {
+	border: 1px solid #ff0000;
+	padding: 5px;
+}

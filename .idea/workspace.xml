@@ -2,30 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b35af6e1-d4fb-4a95-ad56-1357a633caf7" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/controllers/admin_services.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/models/service.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/views/admin/add-service.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/views/admin/edit-service.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/views/admin/services-list.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/system/views/pages/add-page.php" afterPath="$PROJECT_DIR$/system/views/admin/add-page.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/system/views/pages/edit-page.php" afterPath="$PROJECT_DIR$/system/views/admin/edit-page.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/system/views/pages/pages-list.php" afterPath="$PROJECT_DIR$/system/views/admin/pages-list.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/controllers/admin_clients.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/models/client.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/views/admin/add-client.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/system/controllers/admin_controller.php" afterPath="$PROJECT_DIR$/system/controllers/.core/admin_controller.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.ids" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/attorney.sql" afterPath="$PROJECT_DIR$/attorney.sql" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/style.css" afterPath="$PROJECT_DIR$/public/css/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/admin-style.css" afterPath="$PROJECT_DIR$/public/css/admin-style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/form.css" afterPath="$PROJECT_DIR$/public/css/form.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/main.js" afterPath="$PROJECT_DIR$/public/js/main.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/config/routes.php" afterPath="$PROJECT_DIR$/system/config/routes.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/controllers/.core/core.php" afterPath="$PROJECT_DIR$/system/controllers/.core/core.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/controllers/admin_pages.php" afterPath="$PROJECT_DIR$/system/controllers/admin_pages.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/controllers/pages.php" afterPath="$PROJECT_DIR$/system/controllers/pages.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/controllers/admin_services.php" afterPath="$PROJECT_DIR$/system/controllers/admin_services.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/includes/helpers.php" afterPath="$PROJECT_DIR$/system/includes/helpers.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/includes/route.php" afterPath="$PROJECT_DIR$/system/includes/route.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/models/.core/repository.php" afterPath="$PROJECT_DIR$/system/models/.core/repository.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/models/page.php" afterPath="$PROJECT_DIR$/system/models/page.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/includes/start-up.php" afterPath="$PROJECT_DIR$/system/includes/start-up.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/views/admin/add-page.php" afterPath="$PROJECT_DIR$/system/views/admin/add-page.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/views/admin/add-service.php" afterPath="$PROJECT_DIR$/system/views/admin/add-service.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/views/admin/edit-page.php" afterPath="$PROJECT_DIR$/system/views/admin/edit-page.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/views/admin/edit-service.php" afterPath="$PROJECT_DIR$/system/views/admin/edit-service.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/views/partials/admin-menu.php" afterPath="$PROJECT_DIR$/system/views/partials/admin-menu.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/views/partials/header.php" afterPath="$PROJECT_DIR$/system/views/partials/header.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/views/single-page.php" afterPath="$PROJECT_DIR$/system/views/single-page.php" />
     </list>
     <ignored path="advokat.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -57,100 +54,69 @@
         <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
       </PATH_ELEMENT>
     </PATH>
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" />
+        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="MySQL - attorney@localhost" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="clients" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+    </PATH>
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
     <favorites_list name="advokat" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.48127687">
+    <splitter split-orientation="horizontal" split-proportion="0.54390055">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="admin_pages.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/system/controllers/admin_pages.php">
+          <file leaf-file-name="add-client.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/system/views/admin/add-client.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-8.269231">
-                  <caret line="31" column="8" selection-start-line="31" selection-start-column="8" selection-end-line="32" selection-end-column="36" />
+                <state vertical-scroll-proportion="-10.461538">
+                  <caret line="16" column="18" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="add-page.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/system/views/admin/add-page.php">
+          <file leaf-file-name="admin_clients.php" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/system/controllers/admin_clients.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-3.2692308">
-                  <caret line="5" column="140" selection-start-line="5" selection-start-column="69" selection-end-line="5" selection-end-column="140" />
+                <state vertical-scroll-proportion="0.7276369">
+                  <caret line="162" column="27" selection-start-line="162" selection-start-column="27" selection-end-line="162" selection-end-column="27" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="services-list.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/system/views/admin/services-list.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-3.2692308">
-                  <caret line="5" column="47" selection-start-line="5" selection-start-column="47" selection-end-line="5" selection-end-column="47" />
+          <file leaf-file-name="attorney.clients" pinned="false" current-in-tab="false">
+            <entry file="dbDummy://dbtable:/6f707a4a/1f637c82-feae-4e71-808f-4530b87aea28/attorney.clients">
+              <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+                <state>
+                  <filtering enabled="true" />
+                </state>
+              </provider>
+              <provider editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.0">
+                  <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="add-service.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/system/views/admin/add-service.php">
+          <file leaf-file-name="client.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/system/models/client.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-7.1923075">
-                  <caret line="11" column="36" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="36" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="admin_services.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/system/controllers/admin_services.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-20.846153">
-                  <caret line="82" column="36" selection-start-line="82" selection-start-column="36" selection-end-line="82" selection-end-column="36" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="edit-page.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/system/views/admin/edit-page.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-4.576923">
-                  <caret line="7" column="51" selection-start-line="7" selection-start-column="46" selection-end-line="7" selection-end-column="51" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="edit-service.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/system/views/admin/edit-service.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-20.192308">
-                  <caret line="58" column="18" selection-start-line="58" selection-start-column="18" selection-end-line="58" selection-end-column="18" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="service.php" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/system/models/service.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.3705128">
-                  <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="pages.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/system/controllers/pages.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-12.423077">
-                  <caret line="19" column="7" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="7" />
+                <state vertical-scroll-proportion="-11.115385">
+                  <caret line="17" column="20" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
                   <folding />
                 </state>
               </provider>
@@ -170,11 +136,23 @@
               </provider>
             </entry>
           </file>
+          <file leaf-file-name="form.css" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/public/css/form.css">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="-24.23077">
+                  <caret line="40" column="25" selection-start-line="40" selection-start-column="25" selection-end-line="40" selection-end-column="25" />
+                  <folding>
+                    <marker date="1455103596196" expanded="true" signature="327:330" placeholder="{...}" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
           <file leaf-file-name="repository.php" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/system/models/.core/repository.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-16.538462">
-                  <caret line="237" column="40" selection-start-line="237" selection-start-column="40" selection-end-line="237" selection-end-column="40" />
+                <state vertical-scroll-proportion="-10.0">
+                  <caret line="197" column="16" selection-start-line="197" selection-start-column="16" selection-end-line="197" selection-end-column="16" />
                   <folding>
                     <marker date="1455096129609" expanded="true" signature="1705:1719" placeholder="SELECT * FRO... ${static::$table_name}" />
                     <marker date="1455096129609" expanded="true" signature="2304:2380" placeholder="SELECT * FRO... ${static::$table_name}" />
@@ -188,21 +166,41 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="routes.php" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/system/config/routes.php">
+          <file leaf-file-name="start-up.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/system/includes/start-up.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.52307695">
-                  <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+                <state vertical-scroll-proportion="-9.807693">
+                  <caret line="15" column="33" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="helpers.php" pinned="false" current-in-tab="false">
+          <file leaf-file-name="admin-style.css" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/public/css/admin-style.css">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="-24.884615">
+                  <caret line="45" column="1" selection-start-line="45" selection-start-column="1" selection-end-line="45" selection-end-column="1" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="routes.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/system/config/routes.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="-5.230769">
+                  <caret line="8" column="28" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="helpers.php" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/system/includes/helpers.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-10.5">
-                  <caret line="97" column="31" selection-start-line="97" selection-start-column="31" selection-end-line="97" selection-end-column="31" />
+                <state vertical-scroll-proportion="0.5233645">
+                  <caret line="157" column="9" selection-start-line="157" selection-start-column="9" selection-end-line="157" selection-end-column="9" />
                   <folding />
                 </state>
               </provider>
@@ -211,8 +209,18 @@
           <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/public/css/style.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-15.038462">
-                  <caret line="104" column="17" selection-start-line="104" selection-start-column="17" selection-end-line="104" selection-end-column="17" />
+                <state vertical-scroll-proportion="-8.381818">
+                  <caret line="153" column="19" selection-start-line="153" selection-start-column="19" selection-end-line="153" selection-end-column="19" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="admin-menu.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/system/views/partials/admin-menu.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="-12.423077">
+                  <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
                   <folding />
                 </state>
               </provider>
@@ -236,7 +244,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/system/controllers/error_404.php" />
-        <option value="$PROJECT_DIR$/system/includes/start-up.php" />
         <option value="$PROJECT_DIR$/system/models/user.php" />
         <option value="$PROJECT_DIR$/system/controllers/logger.php" />
         <option value="$PROJECT_DIR$/public/index.php" />
@@ -247,36 +254,42 @@
         <option value="$PROJECT_DIR$/system/views/partials/admin-header.php" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/system/views/ajax-result.php" />
-        <option value="$PROJECT_DIR$/system/controllers/admin_controller.php" />
         <option value="$PROJECT_DIR$/system/controllers/admin_ajax.php" />
         <option value="$PROJECT_DIR$/public/js/tinymce/plugins/jbimages/config.php" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/1f637c82-feae-4e71-808f-4530b87aea28/console.sql" />
-        <option value="$PROJECT_DIR$/public/css/form.css" />
-        <option value="$PROJECT_DIR$/public/css/admin-style.css" />
         <option value="$PROJECT_DIR$/system/views/pages/edit-page.php" />
         <option value="$PROJECT_DIR$/system/views/pages/add-page.php" />
         <option value="$PROJECT_DIR$/system/views/home.php" />
         <option value="$PROJECT_DIR$/system/views/single-page.php" />
         <option value="$PROJECT_DIR$/public/css/style.css" />
         <option value="$PROJECT_DIR$/system/views/partials/header.php" />
-        <option value="$PROJECT_DIR$/system/includes/helpers.php" />
         <option value="$PROJECT_DIR$/system/controllers/pages.php" />
         <option value="$PROJECT_DIR$/system/controllers/.core/core.php" />
         <option value="$PROJECT_DIR$/system/includes/route.php" />
         <option value="$PROJECT_DIR$/system/models/.core/repository.php" />
         <option value="$PROJECT_DIR$/system/views/pages/pages-list.php" />
         <option value="$PROJECT_DIR$/system/models/page.php" />
-        <option value="$PROJECT_DIR$/system/views/partials/admin-menu.php" />
         <option value="$PROJECT_DIR$/system/views/admin/pages-list.php" />
-        <option value="$PROJECT_DIR$/system/controllers/admin_pages.php" />
-        <option value="$PROJECT_DIR$/system/views/admin/add-page.php" />
         <option value="$PROJECT_DIR$/system/models/service.php" />
-        <option value="$PROJECT_DIR$/attorney.sql" />
         <option value="$PROJECT_DIR$/system/views/admin/services-list.php" />
+        <option value="$PROJECT_DIR$/system/models/client.php" />
         <option value="$PROJECT_DIR$/system/config/routes.php" />
+        <option value="$PROJECT_DIR$/attorney.sql" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/1f637c82-feae-4e71-808f-4530b87aea28/console.sql" />
+        <option value="$PROJECT_DIR$/system/views/partials/admin-menu.php" />
+        <option value="$PROJECT_DIR$/system/controllers/admin_controller.php" />
+        <option value="$PROJECT_DIR$/system/controllers/admin_pages.php" />
         <option value="$PROJECT_DIR$/system/controllers/admin_services.php" />
+        <option value="$PROJECT_DIR$/system/includes/start-up.php" />
+        <option value="$PROJECT_DIR$/public/js/main.js" />
+        <option value="$PROJECT_DIR$/system/views/admin/add-page.php" />
+        <option value="$PROJECT_DIR$/system/views/admin/edit-page.php" />
         <option value="$PROJECT_DIR$/system/views/admin/edit-service.php" />
         <option value="$PROJECT_DIR$/system/views/admin/add-service.php" />
+        <option value="$PROJECT_DIR$/system/views/admin/add-client.php" />
+        <option value="$PROJECT_DIR$/system/includes/helpers.php" />
+        <option value="$PROJECT_DIR$/public/css/admin-style.css" />
+        <option value="$PROJECT_DIR$/public/css/form.css" />
+        <option value="$PROJECT_DIR$/system/controllers/admin_clients.php" />
       </list>
     </option>
   </component>
@@ -352,7 +365,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="system" />
+              <option name="myItemId" value="public" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -366,11 +379,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="system" />
+              <option name="myItemId" value="public" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="models" />
+              <option name="myItemId" value="images" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -383,7 +396,7 @@
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files (x86)\nodejs\node.exe" />
-    <property name="SearchEverywhereHistoryKey" value="ser&#9;FILE&#9;file://C:/xampp/htdocs/advokat/system/models/service.php&#10;serviceli&#9;FILE&#9;file://C:/xampp/htdocs/advokat/system/views/admin/services-list.php&#10;adminser&#9;FILE&#9;file://C:/xampp/htdocs/advokat/system/controllers/admin_services.php&#10;adminpages&#9;FILE&#9;file://C:/xampp/htdocs/advokat/system/controllers/admin_pages.php&#10;adminme&#9;FILE&#9;file://C:/xampp/htdocs/advokat/system/views/partials/admin-menu.php&#10;page&#9;FILE&#9;file://C:/xampp/htdocs/advokat/system/models/page.php&#10;add&#9;FILE&#9;file://C:/xampp/htdocs/advokat/system/views/pages/add-page.php&#10;pageli&#9;FILE&#9;file://C:/xampp/htdocs/advokat/system/views/pages/pages-list.php&#10;core&#9;FILE&#9;file://C:/xampp/htdocs/advokat/system/controllers/.core/core.php&#10;style&#9;FILE&#9;file://C:/xampp/htdocs/advokat/public/css/style.css&#10;head&#9;FILE&#9;file://C:/xampp/htdocs/advokat/system/views/partials/header.php&#10;header&#9;FILE&#9;file://C:/xampp/htdocs/advokat/system/views/partials/admin-header.php&#10;adminhea&#9;FILE&#9;file://C:/xampp/htdocs/advokat/system/views/partials/admin-header.php&#10;sin&#9;FILE&#9;file://C:/xampp/htdocs/advokat/system/views/single-page.php&#10;pages&#9;FILE&#9;file://C:/xampp/htdocs/advokat/system/controllers/pages.php&#10;helper&#9;FILE&#9;file://C:/xampp/htdocs/advokat/system/includes/helpers.php&#10;adminpa&#9;FILE&#9;file://C:/xampp/htdocs/advokat/system/controllers/admin_pages.php&#10;single&#9;FILE&#9;file://D:/xampp/htdocs/advokat/system/views/single-page.php&#10;routes&#9;FILE&#9;file://D:/xampp/htdocs/advokat/system/config/routes.php&#10;route&#9;FILE&#9;file://D:/xampp/htdocs/advokat/system/includes/route.php&#10;hel&#9;FILE&#9;file://D:/xampp/htdocs/advokat/system/includes/helpers.php&#10;list&#9;FILE&#9;file://D:/xampp/htdocs/advokat/system/views/pages/pages-list.php&#10;reposi&#9;FILE&#9;file://D:/xampp/htdocs/advokat/system/models/.core/repository.php&#10;editpa&#9;FILE&#9;file://C:/xampp/htdocs/advokat/system/views/pages/edit-page.php&#10;index&#9;FILE&#9;file://C:/xampp/htdocs/advokat/public/index.php&#10;PAGESL&#9;FILE&#9;file://C:/xampp/htdocs/advokat/system/views/pages/pages-list.php&#10;logg&#9;FILE&#9;file://C:/xampp/htdocs/advokat/system/controllers/logger.php&#10;loger&#9;null&#9;null&#10;adminmain&#9;FILE&#9;file://C:/xampp/htdocs/advokat/system/views/admin-main.php&#10;main&#9;FILE&#9;file://C:/xampp/htdocs/advokat/system/views/main.php&#10;logge&#9;FILE&#9;file://C:/xampp/htdocs/advokat/system/controllers/logger.php&#10;user&#9;FILE&#9;file://C:/xampp/htdocs/advokat/system/models/user.php" />
+    <property name="SearchEverywhereHistoryKey" value="for&#9;FILE&#9;file://C:/xampp/htdocs/advokat/public/css/form.css&#10;adminclien&#9;FILE&#9;file://C:/xampp/htdocs/advokat/system/controllers/admin_clients.php&#10;star&#9;FILE&#9;file://C:/xampp/htdocs/advokat/system/includes/start-up.php&#10;adminmen&#9;FILE&#9;file://C:/xampp/htdocs/advokat/system/views/partials/admin-menu.php&#10;ser&#9;FILE&#9;file://C:/xampp/htdocs/advokat/system/models/service.php&#10;serviceli&#9;FILE&#9;file://C:/xampp/htdocs/advokat/system/views/admin/services-list.php&#10;adminser&#9;FILE&#9;file://C:/xampp/htdocs/advokat/system/controllers/admin_services.php&#10;adminpages&#9;FILE&#9;file://C:/xampp/htdocs/advokat/system/controllers/admin_pages.php&#10;adminme&#9;FILE&#9;file://C:/xampp/htdocs/advokat/system/views/partials/admin-menu.php&#10;page&#9;FILE&#9;file://C:/xampp/htdocs/advokat/system/models/page.php&#10;add&#9;FILE&#9;file://C:/xampp/htdocs/advokat/system/views/pages/add-page.php&#10;pageli&#9;FILE&#9;file://C:/xampp/htdocs/advokat/system/views/pages/pages-list.php&#10;core&#9;FILE&#9;file://C:/xampp/htdocs/advokat/system/controllers/.core/core.php&#10;style&#9;FILE&#9;file://C:/xampp/htdocs/advokat/public/css/style.css&#10;head&#9;FILE&#9;file://C:/xampp/htdocs/advokat/system/views/partials/header.php&#10;header&#9;FILE&#9;file://C:/xampp/htdocs/advokat/system/views/partials/admin-header.php&#10;adminhea&#9;FILE&#9;file://C:/xampp/htdocs/advokat/system/views/partials/admin-header.php&#10;sin&#9;FILE&#9;file://C:/xampp/htdocs/advokat/system/views/single-page.php&#10;pages&#9;FILE&#9;file://C:/xampp/htdocs/advokat/system/controllers/pages.php&#10;helper&#9;FILE&#9;file://C:/xampp/htdocs/advokat/system/includes/helpers.php&#10;adminpa&#9;FILE&#9;file://C:/xampp/htdocs/advokat/system/controllers/admin_pages.php&#10;single&#9;FILE&#9;file://D:/xampp/htdocs/advokat/system/views/single-page.php&#10;routes&#9;FILE&#9;file://D:/xampp/htdocs/advokat/system/config/routes.php&#10;route&#9;FILE&#9;file://D:/xampp/htdocs/advokat/system/includes/route.php&#10;hel&#9;FILE&#9;file://D:/xampp/htdocs/advokat/system/includes/helpers.php&#10;list&#9;FILE&#9;file://D:/xampp/htdocs/advokat/system/views/pages/pages-list.php&#10;reposi&#9;FILE&#9;file://D:/xampp/htdocs/advokat/system/models/.core/repository.php&#10;editpa&#9;FILE&#9;file://C:/xampp/htdocs/advokat/system/views/pages/edit-page.php&#10;index&#9;FILE&#9;file://C:/xampp/htdocs/advokat/public/index.php&#10;PAGESL&#9;FILE&#9;file://C:/xampp/htdocs/advokat/system/views/pages/pages-list.php&#10;logg&#9;FILE&#9;file://C:/xampp/htdocs/advokat/system/controllers/logger.php&#10;loger&#9;null&#9;null&#10;adminmain&#9;FILE&#9;file://C:/xampp/htdocs/advokat/system/views/admin-main.php&#10;main&#9;FILE&#9;file://C:/xampp/htdocs/advokat/system/views/main.php&#10;logge&#9;FILE&#9;file://C:/xampp/htdocs/advokat/system/controllers/logger.php&#10;user&#9;FILE&#9;file://C:/xampp/htdocs/advokat/system/models/user.php" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../logz" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
@@ -391,11 +404,12 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\advokat\system\views\admin" />
       <recent name="C:\xampp\htdocs\advokat\system\controllers" />
+      <recent name="C:\xampp\htdocs\advokat\system\models" />
       <recent name="C:\xampp\htdocs\advokat\system\views\pages" />
       <recent name="C:\xampp\htdocs\advokat\system\views\partials" />
-      <recent name="C:\xampp\htdocs\advokat\system\views" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\advokat\system\controllers\.core" />
       <recent name="C:\xampp\htdocs\advokat\public\js\tinymce\plugins\justboil" />
       <recent name="D:\xampp\htdocs\advokat\system\config" />
     </key>
@@ -467,8 +481,9 @@
     <frame x="-8" y="-8" width="1936" height="1176" extended-state="6" />
     <editor active="true" />
     <layout>
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21042281" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13166311" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.179941" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.179941" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18230277" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19764012" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -482,7 +497,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23076923" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -525,52 +539,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/system/views/main.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="12" column="38" selection-start-line="12" selection-start-column="38" selection-end-line="12" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/system/models/.core/repository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="2" column="10" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="10" />
-          <folding>
-            <marker date="1455096129609" expanded="true" signature="1705:1719" placeholder="SELECT * FRO... ${static::$table_name}" />
-            <marker date="1455096129609" expanded="true" signature="2304:2380" placeholder="SELECT * FRO... ${static::$table_name}" />
-            <marker date="1455096129609" expanded="true" signature="3268:3316" placeholder="SELECT * FRO... ${static::$table_name}" />
-            <marker date="1455096129609" expanded="true" signature="3899:3975" placeholder="SELECT * FRO... ${static::$table_name}" />
-            <marker date="1455096129609" expanded="true" signature="4490:4569" placeholder="SELECT * FRO... ${static::$table_name}" />
-            <marker date="1455096129609" expanded="true" signature="5453:5516" placeholder="INSERT INTO ${static::$table_name}... " />
-            <marker date="1455096129609" expanded="true" signature="6694:6769" placeholder="DELETE FROM " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/system/config/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="36" selection-start-line="8" selection-start-column="36" selection-end-line="8" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/system/controllers/admin_controller.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="2" column="10" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/system/controllers/error_404.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="2" column="10" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/system/controllers/pages.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -614,6 +582,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.4266843">
           <caret line="46" column="37" selection-start-line="46" selection-start-column="37" selection-end-line="46" selection-end-column="37" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -621,13 +590,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.29194188">
           <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="1" column="7" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -653,43 +615,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/system/controllers/admin_ajax.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.461538">
-          <caret line="16" column="9" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/system/controllers/admin_controller.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.8846154">
-          <caret line="9" column="22" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.4164265">
           <caret line="21" column="9" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/system/includes/start-up.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="12" column="6" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/form.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="31" column="20" selection-start-line="31" selection-start-column="20" selection-end-line="31" selection-end-column="20" />
-          <folding>
-            <marker date="1455091669096" expanded="true" signature="327:330" placeholder="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -724,14 +653,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/admin-style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8108484">
-          <caret line="52" column="28" selection-start-line="52" selection-start-column="28" selection-end-line="52" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/system/views/partials/admin-header.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-5.230769">
@@ -749,14 +670,6 @@
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.038462">
-          <caret line="104" column="17" selection-start-line="104" selection-start-column="17" selection-end-line="104" selection-end-column="17" />
           <folding />
         </state>
       </provider>
@@ -785,30 +698,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/system/includes/helpers.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.5">
-          <caret line="97" column="31" selection-start-line="97" selection-start-column="31" selection-end-line="97" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/system/models/.core/repository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-16.538462">
-          <caret line="237" column="40" selection-start-line="237" selection-start-column="40" selection-end-line="237" selection-end-column="40" />
-          <folding>
-            <marker date="1455096129609" expanded="true" signature="1705:1719" placeholder="SELECT * FRO... ${static::$table_name}" />
-            <marker date="1455096129609" expanded="true" signature="2304:2380" placeholder="SELECT * FRO... ${static::$table_name}" />
-            <marker date="1455096129609" expanded="true" signature="3268:3316" placeholder="SELECT * FRO... ${static::$table_name}" />
-            <marker date="1455096129609" expanded="true" signature="3899:3975" placeholder="SELECT * FRO... ${static::$table_name}" />
-            <marker date="1455096129609" expanded="true" signature="4490:4569" placeholder="SELECT * FRO... ${static::$table_name}" />
-            <marker date="1455096129609" expanded="true" signature="5453:5516" placeholder="INSERT INTO ${static::$table_name}... " />
-            <marker date="1455096129609" expanded="true" signature="6694:6769" placeholder="DELETE FROM " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/system/views/partials/header.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-12.423077">
@@ -833,14 +722,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/system/views/partials/admin-menu.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.5">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/system/views/admin/pages-list.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-4.576923">
@@ -853,14 +734,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-12.423077">
           <caret line="19" column="7" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/system/views/admin/add-page.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.2692308">
-          <caret line="5" column="140" selection-start-line="5" selection-start-column="69" selection-end-line="5" selection-end-column="140" />
           <folding />
         </state>
       </provider>
@@ -878,14 +751,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/attorney.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6116625">
-          <caret line="29" column="46" selection-start-line="29" selection-start-column="46" selection-end-line="29" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/system/views/admin/services-list.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-3.2692308">
@@ -894,58 +759,209 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/system/controllers/admin_pages.php">
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/1f637c82-feae-4e71-808f-4530b87aea28/console.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.269231">
-          <caret line="31" column="8" selection-start-line="31" selection-start-column="8" selection-end-line="32" selection-end-column="36" />
+        <state vertical-scroll-proportion="0.1875862">
+          <caret line="8" column="2" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/system/controllers/admin_services.php">
+    <entry file="file://$PROJECT_DIR$/attorney.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-20.846153">
-          <caret line="82" column="36" selection-start-line="82" selection-start-column="36" selection-end-line="82" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/system/views/admin/edit-page.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.576923">
-          <caret line="7" column="51" selection-start-line="7" selection-start-column="46" selection-end-line="7" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/system/views/admin/edit-service.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-20.192308">
-          <caret line="58" column="18" selection-start-line="58" selection-start-column="18" selection-end-line="58" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/system/config/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.52307695">
-          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/system/views/admin/add-service.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.1923075">
-          <caret line="11" column="36" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="36" />
+        <state vertical-scroll-proportion="0.42781457">
+          <caret line="19" column="32" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/system/models/service.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3705128">
-          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.48971194">
+          <caret line="21" column="1" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/views/partials/admin-menu.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.423077">
+          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/controllers/admin_ajax.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.461538">
+          <caret line="16" column="9" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/includes/start-up.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.807693">
+          <caret line="15" column="33" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="13" column="7" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/controllers/.core/admin_controller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.34979424">
+          <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/controllers/admin_pages.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.1399177">
+          <caret line="6" column="34" selection-start-line="6" selection-start-column="34" selection-end-line="6" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/controllers/admin_services.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.18655692">
+          <caret line="8" column="33" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/views/admin/add-service.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.1538463">
+          <caret line="17" column="85" selection-start-line="17" selection-start-column="85" selection-end-line="17" selection-end-column="85" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/views/admin/edit-service.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-14.307693">
+          <caret line="32" column="8" selection-start-line="32" selection-start-column="8" selection-end-line="32" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/views/admin/edit-page.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-14.307693">
+          <caret line="32" column="8" selection-start-line="32" selection-start-column="8" selection-end-line="32" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/views/admin/add-page.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-14.961538">
+          <caret line="32" column="8" selection-start-line="32" selection-start-column="8" selection-end-line="32" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/models/client.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.115385">
+          <caret line="17" column="20" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/models/.core/repository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.0">
+          <caret line="197" column="16" selection-start-line="197" selection-start-column="16" selection-end-line="197" selection-end-column="16" />
+          <folding>
+            <marker date="1455096129609" expanded="true" signature="1705:1719" placeholder="SELECT * FRO... ${static::$table_name}" />
+            <marker date="1455096129609" expanded="true" signature="2304:2380" placeholder="SELECT * FRO... ${static::$table_name}" />
+            <marker date="1455096129609" expanded="true" signature="3268:3316" placeholder="SELECT * FRO... ${static::$table_name}" />
+            <marker date="1455096129609" expanded="true" signature="3899:3975" placeholder="SELECT * FRO... ${static::$table_name}" />
+            <marker date="1455096129609" expanded="true" signature="4490:4569" placeholder="SELECT * FRO... ${static::$table_name}" />
+            <marker date="1455096129609" expanded="true" signature="5453:5516" placeholder="INSERT INTO ${static::$table_name}... " />
+            <marker date="1455096129609" expanded="true" signature="6694:6769" placeholder="DELETE FROM " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.381818">
+          <caret line="153" column="19" selection-start-line="153" selection-start-column="19" selection-end-line="153" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/admin-style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-24.884615">
+          <caret line="45" column="1" selection-start-line="45" selection-start-column="1" selection-end-line="45" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/form.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-24.23077">
+          <caret line="40" column="25" selection-start-line="40" selection-start-column="25" selection-end-line="40" selection-end-column="25" />
+          <folding>
+            <marker date="1455103596196" expanded="true" signature="327:330" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/config/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.230769">
+          <caret line="8" column="28" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/includes/helpers.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5233645">
+          <caret line="157" column="9" selection-start-line="157" selection-start-column="9" selection-end-line="157" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/6f707a4a/1f637c82-feae-4e71-808f-4530b87aea28/attorney.clients">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/views/admin/add-client.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.461538">
+          <caret line="16" column="18" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/controllers/admin_clients.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7276369">
+          <caret line="162" column="27" selection-start-line="162" selection-start-column="27" selection-end-line="162" selection-end-column="27" />
           <folding />
         </state>
       </provider>

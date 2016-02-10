@@ -20,5 +20,10 @@ $core->add_route('/admin/manage-services', 'services@Admin_services');
 $core->add_route('/admin/add-service', 'add_service@Admin_services');
 $core->add_route('/admin/edit-service/(:num)', 'edit_service@Admin_services');
 $core->add_route('/admin/delete-service/(:num)', 'delete_service@Admin_services');
+// Admin clients
+$core->add_route('/admin/manage-clients', 'clients@Admin_clients');
+$core->add_route('/admin/add-client', 'add_client@Admin_clients');
+$core->add_route('/admin/edit-client/(:num)', 'edit_client@Admin_clients');
+$core->add_route('/admin/delete-client/(:num)', 'delete_client@Admin_clients');
 // Pages language routes
 $core->add_route('/(:any)/(:any)', 'show@Pages');
