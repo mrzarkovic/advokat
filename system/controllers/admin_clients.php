@@ -36,7 +36,7 @@ class Admin_clients extends Admin_controller {
 
 		if (isset($_POST['submit'])) {
 			$errors = $this->check_input();
-			$logo_path = $this->upload_logo('logo_path');
+			$logo_path = $this->upload_image('logo_path');
 			if (is_array($errors) && !empty($errors)) {
 				$this->to_tpl['errors'] = $errors;
 			} else if (is_array($logo_path) && !empty($logo_path)) {
@@ -74,11 +74,19 @@ class Admin_clients extends Admin_controller {
 
 			if (isset($_POST['submit'])) {
 				$errors = $this->check_input();
+				if (!empty($_FILES['logo_path']["tmp_name"]) ) {
+					$logo_path = $this->upload_image('logo_path');
+				} else {
+					$logo_path = $client->logo_path;
+				}
 				if (is_array($errors) && !empty($errors)) {
 					$this->to_tpl['errors'] = $errors;
+				} else if (is_array($logo_path) && !empty($logo_path)) {
+					$this->to_tpl['errors']['logo_path'] = $logo_path;
 				} else {
 					$client->name_sr = post_string('name_sr');
 					$client->name_en = post_string('name_en');
+					$client->logo_path = $logo_path;
 					$client->date_created = new \DateTime("now");
 					$client->published = post_bool('published');
 					if ($client->updateInDb()) {
@@ -127,7 +135,7 @@ class Admin_clients extends Admin_controller {
 	 * @param $field_name [Form input name]
 	 * @return array|string
 	 */
-	private function upload_logo($field_name) {
+	private function upload_image($field_name) {
 		$errors = array();
 
 		if (empty($_FILES[$field_name]["tmp_name"])) {

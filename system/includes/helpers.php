@@ -165,6 +165,7 @@ function generate_form_field($type = "text", $field_name = "name", $label_text =
 	} elseif ($type == "textarea") {
 		echo "<textarea name=\"" . $field_name . "\" id=\"" . $field_name . "\">$value</textarea>";
 	} elseif ($type == "file") {
+		if ($value) echo "<img src=\"/$value\" width=\"200\"><br>";
 		echo "<input type=\"file\" name=\"" . $field_name . "\" id=\"" . $field_name . "\">";
 	}
 	echo "</div>";

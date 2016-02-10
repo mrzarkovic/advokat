@@ -2,27 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b35af6e1-d4fb-4a95-ad56-1357a633caf7" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/controllers/admin_clients.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/models/client.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/views/admin/add-client.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/system/controllers/admin_controller.php" afterPath="$PROJECT_DIR$/system/controllers/.core/admin_controller.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.ids" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/views/admin/clients-list.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/views/admin/edit-client.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/attorney.sql" afterPath="$PROJECT_DIR$/attorney.sql" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/admin-style.css" afterPath="$PROJECT_DIR$/public/css/admin-style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/form.css" afterPath="$PROJECT_DIR$/public/css/form.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/main.js" afterPath="$PROJECT_DIR$/public/js/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/config/routes.php" afterPath="$PROJECT_DIR$/system/config/routes.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/controllers/admin_pages.php" afterPath="$PROJECT_DIR$/system/controllers/admin_pages.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/controllers/admin_services.php" afterPath="$PROJECT_DIR$/system/controllers/admin_services.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/controllers/admin_clients.php" afterPath="$PROJECT_DIR$/system/controllers/admin_clients.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/includes/helpers.php" afterPath="$PROJECT_DIR$/system/includes/helpers.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/includes/start-up.php" afterPath="$PROJECT_DIR$/system/includes/start-up.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/views/admin/add-page.php" afterPath="$PROJECT_DIR$/system/views/admin/add-page.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/views/admin/add-service.php" afterPath="$PROJECT_DIR$/system/views/admin/add-service.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/views/admin/edit-page.php" afterPath="$PROJECT_DIR$/system/views/admin/edit-page.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/views/admin/edit-service.php" afterPath="$PROJECT_DIR$/system/views/admin/edit-service.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/views/partials/admin-menu.php" afterPath="$PROJECT_DIR$/system/views/partials/admin-menu.php" />
     </list>
     <ignored path="advokat.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -54,20 +38,6 @@
         <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
       </PATH_ELEMENT>
     </PATH>
-    <PATH>
-      <PATH_ELEMENT>
-        <option name="myItemId" />
-        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
-      </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="MySQL - attorney@localhost" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="clients" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
-    </PATH>
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
@@ -80,8 +50,8 @@
           <file leaf-file-name="add-client.php" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/system/views/admin/add-client.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-10.461538">
-                  <caret line="16" column="18" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
+                <state vertical-scroll-proportion="-4.576923">
+                  <caret line="7" column="80" selection-start-line="7" selection-start-column="50" selection-end-line="7" selection-end-column="80" />
                   <folding />
                 </state>
               </provider>
@@ -90,23 +60,28 @@
           <file leaf-file-name="admin_clients.php" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/system/controllers/admin_clients.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.7276369">
-                  <caret line="162" column="27" selection-start-line="162" selection-start-column="27" selection-end-line="162" selection-end-column="27" />
+                <state vertical-scroll-proportion="1.2723632">
+                  <caret line="76" column="62" selection-start-line="76" selection-start-column="62" selection-end-line="76" selection-end-column="62" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="attorney.clients" pinned="false" current-in-tab="false">
-            <entry file="dbDummy://dbtable:/6f707a4a/1f637c82-feae-4e71-808f-4530b87aea28/attorney.clients">
-              <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-                <state>
-                  <filtering enabled="true" />
+          <file leaf-file-name="edit-page.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/system/views/admin/edit-page.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="-4.576923">
+                  <caret line="7" column="52" selection-start-line="7" selection-start-column="52" selection-end-line="7" selection-end-column="52" />
+                  <folding />
                 </state>
               </provider>
-              <provider editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0">
-                  <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            </entry>
+          </file>
+          <file leaf-file-name="edit-client.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/system/views/admin/edit-client.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="-15.038462">
+                  <caret line="23" column="31" selection-start-line="23" selection-start-column="31" selection-end-line="23" selection-end-column="31" />
                   <folding />
                 </state>
               </provider>
@@ -199,8 +174,8 @@
           <file leaf-file-name="helpers.php" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/system/includes/helpers.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.5233645">
-                  <caret line="157" column="9" selection-start-line="157" selection-start-column="9" selection-end-line="157" selection-end-column="9" />
+                <state vertical-scroll-proportion="0.682243">
+                  <caret line="168" column="41" selection-start-line="168" selection-start-column="41" selection-end-line="168" selection-end-column="41" />
                   <folding />
                 </state>
               </provider>
@@ -286,10 +261,12 @@
         <option value="$PROJECT_DIR$/system/views/admin/edit-service.php" />
         <option value="$PROJECT_DIR$/system/views/admin/add-service.php" />
         <option value="$PROJECT_DIR$/system/views/admin/add-client.php" />
-        <option value="$PROJECT_DIR$/system/includes/helpers.php" />
         <option value="$PROJECT_DIR$/public/css/admin-style.css" />
         <option value="$PROJECT_DIR$/public/css/form.css" />
+        <option value="$PROJECT_DIR$/system/views/admin/clients-list.php" />
         <option value="$PROJECT_DIR$/system/controllers/admin_clients.php" />
+        <option value="$PROJECT_DIR$/system/includes/helpers.php" />
+        <option value="$PROJECT_DIR$/system/views/admin/edit-client.php" />
       </list>
     </option>
   </component>
@@ -352,6 +329,60 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="advokat" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="advokat" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="advokat" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="system" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="advokat" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="advokat" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="system" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="advokat" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="advokat" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="system" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -539,22 +570,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/system/controllers/pages.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/system/includes/helpers.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="45" column="34" selection-start-line="45" selection-start-column="34" selection-end-line="45" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/system/views/home.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -751,14 +766,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/system/views/admin/services-list.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.2692308">
-          <caret line="5" column="47" selection-start-line="5" selection-start-column="47" selection-end-line="5" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/1f637c82-feae-4e71-808f-4530b87aea28/console.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.1875862">
@@ -855,14 +862,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/system/views/admin/edit-page.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.307693">
-          <caret line="32" column="8" selection-start-line="32" selection-start-column="8" selection-end-line="32" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/system/views/admin/add-page.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-14.961538">
@@ -929,10 +928,50 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/system/views/admin/services-list.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.153846">
+          <caret line="14" column="10" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/views/admin/clients-list.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.5384617">
+          <caret line="10" column="9" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/views/admin/edit-page.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.576923">
+          <caret line="7" column="52" selection-start-line="7" selection-start-column="52" selection-end-line="7" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/views/admin/add-client.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.576923">
+          <caret line="7" column="80" selection-start-line="7" selection-start-column="50" selection-end-line="7" selection-end-column="80" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/system/includes/helpers.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5233645">
-          <caret line="157" column="9" selection-start-line="157" selection-start-column="9" selection-end-line="157" selection-end-column="9" />
+        <state vertical-scroll-proportion="0.682243">
+          <caret line="168" column="41" selection-start-line="168" selection-start-column="41" selection-end-line="168" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/views/admin/edit-client.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-15.038462">
+          <caret line="23" column="31" selection-start-line="23" selection-start-column="31" selection-end-line="23" selection-end-column="31" />
           <folding />
         </state>
       </provider>
@@ -950,18 +989,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/system/views/admin/add-client.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.461538">
-          <caret line="16" column="18" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/system/controllers/admin_clients.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7276369">
-          <caret line="162" column="27" selection-start-line="162" selection-start-column="27" selection-end-line="162" selection-end-column="27" />
+        <state vertical-scroll-proportion="1.2723632">
+          <caret line="76" column="62" selection-start-line="76" selection-start-column="62" selection-end-line="76" selection-end-column="62" />
           <folding />
         </state>
       </provider>
