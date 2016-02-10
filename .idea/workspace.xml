@@ -2,17 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b35af6e1-d4fb-4a95-ad56-1357a633caf7" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/contemporary_china.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/css/clients.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/controllers/clients.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/views/clients.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/style.css" afterPath="$PROJECT_DIR$/public/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/models/client.php" afterPath="$PROJECT_DIR$/system/models/client.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/views/admin/add-client.php" afterPath="$PROJECT_DIR$/system/views/admin/add-client.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/views/admin/edit-client.php" afterPath="$PROJECT_DIR$/system/views/admin/edit-client.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/views/partials/header.php" afterPath="$PROJECT_DIR$/system/views/partials/header.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/views/services.php" afterPath="$PROJECT_DIR$/system/views/services.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/clients.css" afterPath="$PROJECT_DIR$/public/css/clients.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/views/clients.php" afterPath="$PROJECT_DIR$/system/views/clients.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/views/single-page.php" afterPath="$PROJECT_DIR$/system/views/single-page.php" />
     </list>
     <ignored path="advokat.iws" />
@@ -69,8 +60,8 @@
           <file leaf-file-name="clients.php" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/system/views/clients.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-7.8461537">
-                  <caret line="12" column="47" selection-start-line="12" selection-start-column="47" selection-end-line="12" selection-end-column="47" />
+                <state vertical-scroll-proportion="-5.8846154">
+                  <caret line="9" column="21" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
                   <folding />
                 </state>
               </provider>
@@ -129,8 +120,8 @@
           <file leaf-file-name="single-page.php" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/system/views/single-page.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.090787716">
-                  <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+                <state vertical-scroll-proportion="0.0">
+                  <caret line="0" column="30" selection-start-line="0" selection-start-column="30" selection-end-line="0" selection-end-column="30" />
                   <folding />
                 </state>
               </provider>
@@ -250,21 +241,21 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
+          <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/public/css/style.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.6611111">
-                  <caret line="88" column="0" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
+                <state vertical-scroll-proportion="4.327273">
+                  <caret line="82" column="1" selection-start-line="82" selection-start-column="1" selection-end-line="82" selection-end-column="1" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="clients.css" pinned="false" current-in-tab="false">
+          <file leaf-file-name="clients.css" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/public/css/clients.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-3.9230769">
-                  <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+                <state vertical-scroll-proportion="0.34045395">
+                  <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
                   <folding />
                 </state>
               </provider>
@@ -333,11 +324,11 @@
         <option value="$PROJECT_DIR$/system/views/admin/edit-client.php" />
         <option value="$PROJECT_DIR$/system/views/partials/header.php" />
         <option value="$PROJECT_DIR$/system/models/client.php" />
-        <option value="$PROJECT_DIR$/public/css/clients.css" />
         <option value="$PROJECT_DIR$/system/views/services.php" />
+        <option value="$PROJECT_DIR$/public/css/style.css" />
         <option value="$PROJECT_DIR$/system/views/clients.php" />
         <option value="$PROJECT_DIR$/system/views/single-page.php" />
-        <option value="$PROJECT_DIR$/public/css/style.css" />
+        <option value="$PROJECT_DIR$/public/css/clients.css" />
       </list>
     </option>
   </component>
@@ -516,7 +507,7 @@
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files (x86)\nodejs\node.exe" />
-    <property name="SearchEverywhereHistoryKey" value="clients&#9;FILE&#9;file://C:/xampp/htdocs/advokat/public/css/clients.css&#10;client&#9;FILE&#9;file://C:/xampp/htdocs/advokat/system/models/client.php&#10;services&#9;FILE&#9;file://C:/xampp/htdocs/advokat/system/controllers/services.php&#10;core&#9;FILE&#9;file://C:/xampp/htdocs/advokat/system/controllers/.core/core.php&#10;style&#9;FILE&#9;file://C:/xampp/htdocs/advokat/public/css/style.css&#10;header&#9;FILE&#9;file://C:/xampp/htdocs/advokat/system/views/partials/header.php&#10;for&#9;FILE&#9;file://C:/xampp/htdocs/advokat/public/css/form.css&#10;adminclien&#9;FILE&#9;file://C:/xampp/htdocs/advokat/system/controllers/admin_clients.php&#10;star&#9;FILE&#9;file://C:/xampp/htdocs/advokat/system/includes/start-up.php&#10;adminmen&#9;FILE&#9;file://C:/xampp/htdocs/advokat/system/views/partials/admin-menu.php&#10;ser&#9;FILE&#9;file://C:/xampp/htdocs/advokat/system/models/service.php&#10;serviceli&#9;FILE&#9;file://C:/xampp/htdocs/advokat/system/views/admin/services-list.php&#10;adminser&#9;FILE&#9;file://C:/xampp/htdocs/advokat/system/controllers/admin_services.php&#10;adminpages&#9;FILE&#9;file://C:/xampp/htdocs/advokat/system/controllers/admin_pages.php&#10;adminme&#9;FILE&#9;file://C:/xampp/htdocs/advokat/system/views/partials/admin-menu.php&#10;page&#9;FILE&#9;file://C:/xampp/htdocs/advokat/system/models/page.php&#10;add&#9;FILE&#9;file://C:/xampp/htdocs/advokat/system/views/pages/add-page.php&#10;pageli&#9;FILE&#9;file://C:/xampp/htdocs/advokat/system/views/pages/pages-list.php&#10;head&#9;FILE&#9;file://C:/xampp/htdocs/advokat/system/views/partials/header.php&#10;adminhea&#9;FILE&#9;file://C:/xampp/htdocs/advokat/system/views/partials/admin-header.php&#10;sin&#9;FILE&#9;file://C:/xampp/htdocs/advokat/system/views/single-page.php&#10;pages&#9;FILE&#9;file://C:/xampp/htdocs/advokat/system/controllers/pages.php&#10;helper&#9;FILE&#9;file://C:/xampp/htdocs/advokat/system/includes/helpers.php&#10;adminpa&#9;FILE&#9;file://C:/xampp/htdocs/advokat/system/controllers/admin_pages.php&#10;single&#9;FILE&#9;file://D:/xampp/htdocs/advokat/system/views/single-page.php&#10;routes&#9;FILE&#9;file://D:/xampp/htdocs/advokat/system/config/routes.php&#10;route&#9;FILE&#9;file://D:/xampp/htdocs/advokat/system/includes/route.php&#10;hel&#9;FILE&#9;file://D:/xampp/htdocs/advokat/system/includes/helpers.php&#10;list&#9;FILE&#9;file://D:/xampp/htdocs/advokat/system/views/pages/pages-list.php&#10;reposi&#9;FILE&#9;file://D:/xampp/htdocs/advokat/system/models/.core/repository.php&#10;editpa&#9;FILE&#9;file://C:/xampp/htdocs/advokat/system/views/pages/edit-page.php&#10;index&#9;FILE&#9;file://C:/xampp/htdocs/advokat/public/index.php&#10;PAGESL&#9;FILE&#9;file://C:/xampp/htdocs/advokat/system/views/pages/pages-list.php&#10;logg&#9;FILE&#9;file://C:/xampp/htdocs/advokat/system/controllers/logger.php&#10;loger&#9;null&#9;null&#10;adminmain&#9;FILE&#9;file://C:/xampp/htdocs/advokat/system/views/admin-main.php&#10;main&#9;FILE&#9;file://C:/xampp/htdocs/advokat/system/views/main.php&#10;logge&#9;FILE&#9;file://C:/xampp/htdocs/advokat/system/controllers/logger.php&#10;user&#9;FILE&#9;file://C:/xampp/htdocs/advokat/system/models/user.php" />
+    <property name="SearchEverywhereHistoryKey" value="single&#9;FILE&#9;file://C:/xampp/htdocs/advokat/system/views/single-page.php&#10;clients&#9;FILE&#9;file://C:/xampp/htdocs/advokat/system/views/clients.php&#10;client&#9;FILE&#9;file://C:/xampp/htdocs/advokat/system/models/client.php&#10;services&#9;FILE&#9;file://C:/xampp/htdocs/advokat/system/controllers/services.php&#10;core&#9;FILE&#9;file://C:/xampp/htdocs/advokat/system/controllers/.core/core.php&#10;style&#9;FILE&#9;file://C:/xampp/htdocs/advokat/public/css/style.css&#10;header&#9;FILE&#9;file://C:/xampp/htdocs/advokat/system/views/partials/header.php&#10;for&#9;FILE&#9;file://C:/xampp/htdocs/advokat/public/css/form.css&#10;adminclien&#9;FILE&#9;file://C:/xampp/htdocs/advokat/system/controllers/admin_clients.php&#10;star&#9;FILE&#9;file://C:/xampp/htdocs/advokat/system/includes/start-up.php&#10;adminmen&#9;FILE&#9;file://C:/xampp/htdocs/advokat/system/views/partials/admin-menu.php&#10;ser&#9;FILE&#9;file://C:/xampp/htdocs/advokat/system/models/service.php&#10;serviceli&#9;FILE&#9;file://C:/xampp/htdocs/advokat/system/views/admin/services-list.php&#10;adminser&#9;FILE&#9;file://C:/xampp/htdocs/advokat/system/controllers/admin_services.php&#10;adminpages&#9;FILE&#9;file://C:/xampp/htdocs/advokat/system/controllers/admin_pages.php&#10;adminme&#9;FILE&#9;file://C:/xampp/htdocs/advokat/system/views/partials/admin-menu.php&#10;page&#9;FILE&#9;file://C:/xampp/htdocs/advokat/system/models/page.php&#10;add&#9;FILE&#9;file://C:/xampp/htdocs/advokat/system/views/pages/add-page.php&#10;pageli&#9;FILE&#9;file://C:/xampp/htdocs/advokat/system/views/pages/pages-list.php&#10;head&#9;FILE&#9;file://C:/xampp/htdocs/advokat/system/views/partials/header.php&#10;adminhea&#9;FILE&#9;file://C:/xampp/htdocs/advokat/system/views/partials/admin-header.php&#10;sin&#9;FILE&#9;file://C:/xampp/htdocs/advokat/system/views/single-page.php&#10;pages&#9;FILE&#9;file://C:/xampp/htdocs/advokat/system/controllers/pages.php&#10;helper&#9;FILE&#9;file://C:/xampp/htdocs/advokat/system/includes/helpers.php&#10;adminpa&#9;FILE&#9;file://C:/xampp/htdocs/advokat/system/controllers/admin_pages.php&#10;routes&#9;FILE&#9;file://D:/xampp/htdocs/advokat/system/config/routes.php&#10;route&#9;FILE&#9;file://D:/xampp/htdocs/advokat/system/includes/route.php&#10;hel&#9;FILE&#9;file://D:/xampp/htdocs/advokat/system/includes/helpers.php&#10;list&#9;FILE&#9;file://D:/xampp/htdocs/advokat/system/views/pages/pages-list.php&#10;reposi&#9;FILE&#9;file://D:/xampp/htdocs/advokat/system/models/.core/repository.php&#10;editpa&#9;FILE&#9;file://C:/xampp/htdocs/advokat/system/views/pages/edit-page.php&#10;index&#9;FILE&#9;file://C:/xampp/htdocs/advokat/public/index.php&#10;PAGESL&#9;FILE&#9;file://C:/xampp/htdocs/advokat/system/views/pages/pages-list.php&#10;logg&#9;FILE&#9;file://C:/xampp/htdocs/advokat/system/controllers/logger.php&#10;loger&#9;null&#9;null&#10;adminmain&#9;FILE&#9;file://C:/xampp/htdocs/advokat/system/views/admin-main.php&#10;main&#9;FILE&#9;file://C:/xampp/htdocs/advokat/system/views/main.php&#10;logge&#9;FILE&#9;file://C:/xampp/htdocs/advokat/system/controllers/logger.php&#10;user&#9;FILE&#9;file://C:/xampp/htdocs/advokat/system/models/user.php" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../logz" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
@@ -1049,22 +1040,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/clients.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.9230769">
-          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/system/views/clients.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.8461537">
-          <caret line="12" column="47" selection-start-line="12" selection-start-column="47" selection-end-line="12" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/system/views/services.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-15.692307">
@@ -1077,16 +1052,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6611111">
-          <caret line="88" column="0" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
+        <state vertical-scroll-proportion="4.327273">
+          <caret line="82" column="1" selection-start-line="82" selection-start-column="1" selection-end-line="82" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/views/clients.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.8846154">
+          <caret line="9" column="21" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/system/views/single-page.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.090787716">
-          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="30" selection-start-line="0" selection-start-column="30" selection-end-line="0" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/clients.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.34045395">
+          <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
           <folding />
         </state>
       </provider>
