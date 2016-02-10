@@ -2,16 +2,21 @@
 	<div class="content clearfix">
 		<a href="/" class="logo">
 			<?php echo $this->site_name; ?>
-			<small><?php echo $this->page_name; ?></small>
 		</a>
 	</div>
 	<nav class="navigation main">
 		<ul class="clearfix">
 			<?php foreach ($pages as $page) : ?>
 				<li>
-					<a href="<?php echo $page->get_language_url($this->get_language()); ?>"><?php echo $page->get_language_title($this->get_language()); ?></a>
+					<a href="<?php echo $page->get_language_url($this->get_language()); ?>" class="<?php current_menu($page->id, $this->get_current_menu()); ?>"><?php echo $page->get_language_title($this->get_language()); ?></a>
 				</li>
 			<?php endforeach; ?>
+			<li>
+				<a href="<?php echo $this->services_url[$this->get_language()]; ?>" class="<?php current_menu("services", $this->get_current_menu()); ?>"><?php echo $this->services_title[$this->get_language()]; ?></a>
+			</li>
+			<li>
+				<a href="<?php echo $this->clients_url[$this->get_language()]; ?>"><?php echo $this->clients_title[$this->get_language()]; ?></a>
+			</li>
 			<li class="language-item">
 				<a href="/sr">Sr</a>
 			</li>

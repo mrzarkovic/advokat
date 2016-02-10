@@ -31,11 +31,11 @@ class Pages extends Core {
 	 */
 	public function show($lang = "", $permalink = "") {
 		if (isset($lang) && array_key_exists($lang, self::$availableLanguages)) {
-			// TODO: Resolve the requested page by permalink
 			$this->set_language($lang);
 			$this->template = "single-page";
 			$page = new Page();
 			$page = $page->getByPermalink($permalink, $lang);
+			$this->set_current_menu($page->id);
 			$this->to_tpl['lang'] = $lang;
 			$this->to_tpl['page'] = $page;
 		} else {

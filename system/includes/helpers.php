@@ -195,3 +195,7 @@ function generate_permalink($string = "") {
 
 	return $string;
 }
+
+function current_menu ($page_name, $current_page) {
+	if ($page_name == $current_page) echo "current";
+}

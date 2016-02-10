@@ -65,6 +65,11 @@ section.main > h1 {
 	border-bottom: 1px solid #eee;
 }
 
+article > h1 {
+	font-size: 20px;
+	margin-bottom: 10px;
+}
+
 .content {
 	padding: 10px;
 }
@@ -116,7 +121,8 @@ nav ul li a {
 	border-radius: 3px;
 }
 
-nav ul li a:hover {
+nav ul li a:hover,
+nav ul li a.current {
 	background: #fff;
 	box-shadow: 0px 0px 3px #ccc;
 }
@@ -207,57 +213,6 @@ nav ul li a:hover {
 .admin-submenu a:hover {
 	background: rgb(61, 155, 177);
 	cursor: pointer;
-}
-
-.admin-destinations .destination {
-	margin: 10px 0;
-	padding: 5px;
-}
-
-.admin-destinations .destination:hover {
-	background: #f7f7f7;
-}
-
-.admin-destinations .destination h1 * {
-	color: #666;
-	font-weight: normal;
-}
-
-.admin-destinations .destination a {
-	font-size: 14px;
-	display: inline-block;
-	margin: 3px 5px 0 0;
-	text-decoration: underline;
-	color: rgb(25, 132, 158);
-}
-
-.admin-destinations .destination a:hover {
-	color: rgb(189, 52, 52);
-}
-
-.reservations ol {
-	margin: 10px 0;
-	padding: 0 0 0 20px;
-}
-
-.reservations ol li {
-	padding: 5px 10px;
-}
-
-.reservations ol li a {
-	display: inline-block;
-	font-size: 14px;
-	padding: 5px 0;
-	text-decoration: underline;
-	color: rgb(25, 132, 158);
-}
-
-.reservations ol li a:hover {
-	color: rgb(189, 52, 52);
-}
-
-.reservations ol li:hover {
-	background: #f7f7f7;
 }
 
 .control {
@@ -435,3 +390,14 @@ nav ul li a:hover {
 	color: #843534;
 }
 /* end of BOOTSTRAP ALERTS */
+
+/* FLUID */
+.fluid-holder {
+	display: table;
+}
+
+.fluid-holder .cell {
+	display: table-cell;
+	vertical-align: top;
+}
+/* end of FLUID */

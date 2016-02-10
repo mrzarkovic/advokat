@@ -35,6 +35,12 @@ class Core {
 	public $page_name;
 
 	/**
+	 * Stores the page name for menu
+	 * @var string
+	 */
+	public static $current_menu;
+
+	/**
 	 * Stores template data
 	 * @var array
 	 */
@@ -65,6 +71,26 @@ class Core {
 	public static $availableLanguages = array(
 		"sr" => "Srpski",
 		"en" => "English"
+	);
+
+	public $clients_title = array(
+		"sr" => "Klijenti",
+		"en" => "Clients"
+	);
+
+	public $clients_url = array(
+		"sr" => "/sr/klijenti",
+		"en" => "/en/clients"
+	);
+
+	public $services_title = array(
+		"sr" => "Usluge",
+		"en" => "Services"
+	);
+
+	public $services_url = array(
+		"sr" => "/sr/usluge",
+		"en" => "/en/services"
 	);
 
 	public function __construct() {
@@ -130,6 +156,14 @@ class Core {
 	 */
 	public function get_language() {
 		return static::$language;
+	}
+
+	public function set_current_menu($current_menu = "") {
+		static::$current_menu = $current_menu;
+	}
+
+	public function get_current_menu() {
+		return static::$current_menu;
 	}
 
 	/**

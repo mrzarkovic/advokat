@@ -19,4 +19,24 @@ class Service extends Repository {
 	public function __construct($row = array()) {
 		parent::__construct($row);
 	}
+
+	/**
+	 * Get the title for a language
+	 * @param string $lang
+	 * @return string
+	 */
+	public function get_language_title($lang = "") {
+		$title_field = "title_" . $lang;
+		return $this->$title_field;
+	}
+
+	/**
+	 * Get the body for a language
+	 * @param string $lang
+	 * @return string
+	 */
+	public function get_language_body($lang = "") {
+		$body_field = "body_" . $lang;
+		return $this->$body_field;
+	}
 }
