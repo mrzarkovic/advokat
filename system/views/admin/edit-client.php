@@ -17,6 +17,7 @@
 			</div>
 		</div>
 		<?php generate_form_field("file", "logo_path", "Logo", $client->logo_path, $errors); ?>
+		<p class="notice">Preporučena širina slike je 200px</p>
 		<div class="form-field">
 			<label for="published">Status:</label>
 			<select id="published" name="published">

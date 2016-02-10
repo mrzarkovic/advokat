@@ -15,7 +15,7 @@
 				<a href="<?php echo $this->services_url[$this->get_language()]; ?>" class="<?php current_menu("services", $this->get_current_menu()); ?>"><?php echo $this->services_title[$this->get_language()]; ?></a>
 			</li>
 			<li>
-				<a href="<?php echo $this->clients_url[$this->get_language()]; ?>"><?php echo $this->clients_title[$this->get_language()]; ?></a>
+				<a href="<?php echo $this->clients_url[$this->get_language()]; ?>" class="<?php current_menu("clients", $this->get_current_menu()); ?>"><?php echo $this->clients_title[$this->get_language()]; ?></a>
 			</li>
 			<li class="language-item">
 				<a href="/sr">Sr</a>

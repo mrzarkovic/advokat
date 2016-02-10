@@ -18,4 +18,9 @@ class Client extends Repository {
 	public function __construct($row = array()) {
 		parent::__construct($row);
 	}
+
+	public function get_language_name($lang = "") {
+		$name_field = "name_" . $lang;
+		return $this->$name_field;
+	}
 }

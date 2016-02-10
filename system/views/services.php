@@ -1,5 +1,5 @@
 <link rel="stylesheet" type="text/css" href="/css/services.css"/>
-<section class="main content clearfix">
+<section class="clearfix">
 	<?php if(isset($services) && !empty($services)) : ?>
 	<div class="fluid-holder">
 		<section id="bookmarks" class="cell">
