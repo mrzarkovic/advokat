@@ -136,9 +136,10 @@ class Core {
 	 * Add a route to the Route object
 	 * @param string $route  URI
 	 * @param string $action Controller and method
+	 * @param array  $arguments
 	 */
-	public function add_route($route = "", $action = "") {
-		$this->route->add($route, $action);
+	public function add_route($route = "", $action = "", $arguments = array()) {
+		$this->route->add($route, $action, $arguments);
 	}
 
 	/**

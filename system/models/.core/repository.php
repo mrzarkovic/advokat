@@ -141,6 +141,27 @@ class Repository {
 	}
 
 	/**
+	 * Get the record where field equals value
+	 * @param string $field_name
+	 * @param string $value
+	 * @return bool
+	 * @throws \Exception
+	 */
+	public function getByFieldValue($field_name = "", $value) {
+		try {
+			$stmt = self::$db->prepare("SELECT * FROM " . static::$table_name . " WHERE `" . $field_name . "`=:value");
+			$stmt->bindParam(':value', $value, static::getPdoTypeByFieldName($field_name));
+			if ($stmt->execute()) {
+				return new static($stmt->fetch(PDO::FETCH_ASSOC));
+			} else {
+				return false;
+			}
+		} catch (\PDOException $e) {
+			throw new \Exception("Error: " . $e->getMessage());
+		}
+	}
+
+	/**
 	 * Get the record from the database
 	 * based on the provided id
 	 * @param int $id
@@ -168,12 +189,14 @@ class Repository {
 	public function saveToDb() {
 		$fields = "(";
 		$values = "(";
+		$bindParams = array();
 		foreach (static::$fields as $field => $type) {
 			$fields .= "`" . $field . "`,";
+			$values .= ":" . $field . ",";
 			if ($type == "date")
-				$values .= "'" . $this->$field->format("Y-m-d H:i:s") . "',";
+				$bindParams[':' . $field] = $this->$field->format("Y-m-d H:i:s");
 			else
-				$values .= "'" . $this->$field . "',";
+				$bindParams[':' . $field] = $this->$field;
 		}
 		// Remove the trailing commas
 		$fields = rtrim($fields, ",");
@@ -183,7 +206,7 @@ class Repository {
 
 		try {
 			$stmt = self::$db->prepare("INSERT INTO " . static::$table_name . " " . $fields . " VALUES " . $values);
-			if ($stmt->execute())
+			if ($stmt->execute($bindParams))
 				return self::$db->lastInsertId();
 			else
 				return false;
@@ -199,18 +222,19 @@ class Repository {
 	 */
 	public function updateInDb() {
 		$set = "";
+		$bindParams = array();
 		foreach (static::$fields as $field => $type) {
+			$set .= "`" . $field . "`=:" . $field . ",";
 			if ($type == "date")
-				$set .= "`" . $field . "`='" . $this->$field->format("Y-m-d H:i:s") . "',";
+				$bindParams[':' . $field] = $this->$field->format("Y-m-d H:i:s");
 			else
-				$set .= "`" . $field . "`='" . $this->$field . "',";
+				$bindParams[':' . $field] = $this->$field;
 		}
 		$set = rtrim($set, ",");
 		try {
-			$stmt = self::$db->prepare("UPDATE " . static::$table_name . " SET " . $set . " WHERE `" . self::$id_field . "`=:id");
 			$id_field = static::$id_field;
-			$stmt->bindParam(':id', $this->$id_field, PDO::PARAM_INT);
-			if ($stmt->execute())
+			$stmt = self::$db->prepare("UPDATE " . static::$table_name . " SET " . $set . " WHERE `" . self::$id_field . "`=" . $this->$id_field);
+			if ($stmt->execute($bindParams))
 				return $this->$id_field;
 			else
 				return false;

@@ -6,6 +6,12 @@
 				<li><a href="/admin/add-page">Dodaj stranicu</a></li>
 			</ul>
 		</li>
+		<li>
+			<a href="/admin/manage-services">Usluge</a>
+			<ul>
+				<li><a href="/admin/add-service">Dodaj uslugu</a></li>
+			</ul>
+		</li>
 		<li><a href="/admin/manage-clients">Klijenti</a></li>
 	</ul>
 </nav>

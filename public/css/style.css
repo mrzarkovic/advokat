@@ -73,6 +73,10 @@ section.main > h1 {
 	position: relative;
 }
 
+.main article ul {
+	padding-left: 20px;
+}
+
 /* NAVIGATION */
 
 .header .navigation {
@@ -95,6 +99,10 @@ nav ul {
 nav.main ul li {
 	display: block;
 	float: left;
+}
+
+nav.main ul li.language-item {
+	float: right;
 }
 
 nav ul li.admin-login {

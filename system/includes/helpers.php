@@ -139,6 +139,8 @@ function get_pages_images_list() {
  * @param string $type
  * @param string $field_name
  * @param string $label_text
+ * @param string $value
+ * @param array  $errors
  * @param string $placeholder
  */
 function generate_form_field($type = "text", $field_name = "name", $label_text = "", $value = "", $errors = array(), $placeholder = "") {
@@ -156,4 +158,29 @@ function generate_form_field($type = "text", $field_name = "name", $label_text =
 		echo "<textarea name=\"" . $field_name . "\" id=\"" . $field_name . "\">$value</textarea>";
 	}
 	echo "</div>";
+}
+
+/**
+ * Generate a permalink from the string
+ * @param string $string
+ * @return string
+ */
+function generate_permalink($string = "") {
+	$string = html_entity_decode($string, ENT_QUOTES, 'UTF-8');
+	// Replace non letter or digits by -
+	$string = preg_replace('~[^\\pL\d.]+~u', '-', $string);
+	// Replace dots
+	$string = str_replace(".", "_", $string);
+	// Trim
+	$string = trim($string, '-');
+	// Transliterate
+	if (function_exists('iconv')) {
+		$string = iconv('UTF-8', 'us-ascii//TRANSLIT//IGNORE', $string);
+	}
+	// Lowercase
+	$string = strtolower($string);
+	// Remove unwanted characters
+	$string = preg_replace('~[^-\w.]+~', '', $string);
+
+	return $string;
 }

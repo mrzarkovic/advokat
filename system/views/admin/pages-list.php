@@ -1,5 +1,8 @@
 <section class="admin content">
 	<h1>Lista stranica:</h1>
+	<?php if(isset($page_deleted) && $page_deleted == true) : ?>
+		<div class="alert alert-success">Stranica je obrisana.</div>
+	<?php endif; ?>
 	<?php if (isset($pages) && !empty($pages)) : ?>
 	<ol class="pages-list">
 		<?php foreach ($pages as $page) : ?>

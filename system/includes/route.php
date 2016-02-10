@@ -19,6 +19,12 @@ class Route {
 	 */
 	private $_function = array();
 
+	/**
+	 * Stores all the arguments for the class method
+	 * @var array
+	 */
+	private $_arguments = array();
+
 	public $class;
 	public $method;
 	public $arguments;
@@ -27,9 +33,12 @@ class Route {
 	 * Builds a collection of internal URL's to look for
 	 * @param string $uri
 	 * @param string $function
+	 * @param array  $arguments
 	 */
-	public function add($uri = '', $function = '') {
+	public function add($uri = '', $function = '', $arguments = array()) {
 		$this->_uri[] = $uri;
+
+		$this->_arguments[] = $arguments;
 
 		if ($function != '') {
 			$this->_function[] = $function;
@@ -88,7 +97,7 @@ class Route {
 					//$call = new $class();
 					$this->class = $class;
 					$this->method = $func;
-					$this->arguments = $function_arguments;
+					$this->arguments = array_merge($this->_arguments[$key], $function_arguments);
 					return;
 					//return $call->$func( $function_arguments );
 				} /* else, presume it is an anonymous function */

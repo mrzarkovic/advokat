@@ -18,7 +18,7 @@ class Admin_pages extends Admin_controller {
 		$pages = new Page();
 		$pages->fetchAll();
 		$this->to_tpl['pages'] = $pages->list;
-		$this->template = "pages/pages-list";
+		$this->template = "admin/pages-list";
 
 		return;
 	}
@@ -29,8 +29,10 @@ class Admin_pages extends Admin_controller {
 	 */
 	public function add_page() {
 		$this->to_tpl['success'] = false;
+		$this->to_tpl['id'] = 0;
+		$this->to_tpl['title'] = "";
 		$this->to_tpl['errors'] = false;
-		$this->template = "pages/add-page";
+		$this->template = "admin/add-page";
 
 		if (isset($_POST['submit'])) {
 			$errors = $this->check_input();
@@ -42,10 +44,15 @@ class Admin_pages extends Admin_controller {
 				$page->body_sr = post_string('body_sr');
 				$page->title_en = post_string('title_en');
 				$page->body_en = post_string('body_en');
+				$page->permalink_sr = generate_permalink($page->title_sr);
+				$page->permalink_en = generate_permalink($page->title_en);
 				$page->date_created = new \DateTime("now");
 				$page->published = post_bool('published');
-				if ($page->saveToDb()) {
+				if ($id = $page->saveToDb()) {
 					$this->to_tpl['success'] = true;
+					$this->to_tpl['id'] = $id;
+					$this->to_tpl['title'] = $page->title_sr;
+					$_POST = array();
 				}
 			}
 		}
@@ -53,13 +60,18 @@ class Admin_pages extends Admin_controller {
 		return;
 	}
 
+	/**
+	 * Edit a page
+	 * @param int $id
+	 * @throws \Exception
+	 */
 	public function edit_page($id = 0) {
 		$this->to_tpl['success'] = false;
 		$this->to_tpl['errors'] = false;
 		$page = new Page();
 		if ($page = $page->getById($id)) {
 			$this->to_tpl['page'] = $page;
-			$this->template = "pages/edit-page";
+			$this->template = "admin/edit-page";
 
 			if (isset($_POST['submit'])) {
 				$errors = $this->check_input();
@@ -70,6 +82,8 @@ class Admin_pages extends Admin_controller {
 					$page->body_sr = post_string('body_sr');
 					$page->title_en = post_string('title_en');
 					$page->body_en = post_string('body_en');
+					$page->permalink_sr = generate_permalink($page->title_sr);
+					$page->permalink_en = generate_permalink($page->title_en);
 					$page->date_created = new \DateTime("now");
 					$page->published = post_bool('published');
 					if ($page->updateInDb()) {
@@ -94,7 +108,10 @@ class Admin_pages extends Admin_controller {
 		if ($page = $page->getById($id))
 			$page->deleteFromDb();
 
-		header('Location: /admin/manage-pages');
+		$this->pages();
+		$this->to_tpl['page_deleted'] = true;
+		return;
+		//header('Location: /admin/manage-pages');
 	}
 
 	/**

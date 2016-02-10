@@ -7,14 +7,17 @@
 	</div>
 	<nav class="navigation main">
 		<ul class="clearfix">
-			<li>
-				<a href="/">Početna</a>
-			</li>
 			<?php foreach ($pages as $page) : ?>
 				<li>
 					<a href="<?php echo $page->get_language_url($this->get_language()); ?>"><?php echo $page->get_language_title($this->get_language()); ?></a>
 				</li>
 			<?php endforeach; ?>
+			<li class="language-item">
+				<a href="/sr">Sr</a>
+			</li>
+			<li class="language-item">
+				<a href="/en">En</a>
+			</li>
 			<?php
 			if (!user_logged_in()) {
 				?>

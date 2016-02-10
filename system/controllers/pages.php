@@ -35,7 +35,7 @@ class Pages extends Core {
 			$this->set_language($lang);
 			$this->template = "single-page";
 			$page = new Page();
-			$page = $page->getById($permalink);
+			$page = $page->getByPermalink($permalink, $lang);
 			$this->to_tpl['lang'] = $lang;
 			$this->to_tpl['page'] = $page;
 		} else {
