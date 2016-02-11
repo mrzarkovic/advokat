@@ -1,0 +1,58 @@
+section#bookmarks {
+	float: left;
+	background: #fff;
+	padding: 10px;
+	width: 200px;
+	margin: 0 10px 0 0;
+	border-radius: 5px;
+	border-bottom: 2px solid #007AF5;
+	box-shadow: 0 0px 10px rgba(0,0,0,.2);
+}
+
+section#bookmarks ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+section#bookmarks a {
+	text-decoration: none;
+	padding: 5px;
+	display: block;
+	line-height: 18px;
+	color: #333;
+	border-bottom: 1px solid #ccc;
+}
+
+
+section#bookmarks a:hover,
+section#bookmarks a.current {
+	color: #007AF5;
+}
+
+@media only screen and (max-width: 768px) {
+	#bookmarks {
+		display: none;
+	}
+	article.cell {
+		display: block !important;
+	}
+	article.cell:hover {
+		cursor: pointer;
+	}
+}
+/*
+article.collapsable {
+	float: left;
+	width: 690px;
+}
+*/
+article.cell {
+	background: #fff;
+	padding: 15px;
+	width: 100%;
+	margin-bottom: 20px;
+	border-bottom: 2px solid #007AF5;
+	border-radius: 5px;
+	box-shadow: 0 0px 10px rgba(0,0,0,.2);
+}

@@ -1,14 +1,13 @@
-.fluid-holder {
-	display: table;
-}
-
-.fluid-holder .cell {
-	display: table-cell;
-	vertical-align: top;
-}
-
 .admin-menu {
 	min-width: 160px;
+}
+
+.admin-nav {
+	padding: 0;
+}
+
+.admin-nav a {
+	color: #333;
 }
 
 .admin-nav ul li ul li {
@@ -16,7 +15,13 @@
 }
 
 .admin-nav ul li ul li a {
-	font-size: 12px;
+	font-size: 14px;
+}
+
+.admin-page {
+	padding: 5px;
+	background: #fff;
+	border-radius: 3px;
 }
 
 .admin-content {
@@ -33,7 +38,13 @@
 }
 
 .admin-content .pages-list {
-	padding-left: 20px;
+	padding-left: 10px;
+	list-style-type: none;
+}
+
+.admin-content .pages-list li {
+	border-bottom: 1px solid #ccc;
+	padding: 3px 0;
 }
 
 .admin-content .pages-list a {
@@ -45,11 +56,39 @@
 	color: #6495ed;
 }
 
-.form-error {
-	color: #ff0000;
+.ui-state-highlight {
+	background-color: #ccc;
+	height: 1.5em;
+	line-height: 1.2em;
 }
 
-.form-error + .form-field {
-	border: 1px solid #ff0000;
-	padding: 5px;
+.admin-btn {
+	display: inline-block;
+	margin-bottom: 10px;
+	padding: 5px 10px;
+	background: #fff;
+	border-radius: 3px;
+	box-shadow: 0 0 3px #ccc;
+}
+
+.admin-btn:hover {
+	color: #6495ed;
+}
+
+.order-options .change-order {
+	display: inline-block;
+}
+
+.order-options .save-order,
+.order-options .cancel-order {
+	display: none;
+}
+
+.order-options.active-changes .save-order,
+.order-options.active-changes .cancel-order {
+	display: inline-block;
+}
+
+.order-options.active-changes .change-order {
+	display: none;
 }

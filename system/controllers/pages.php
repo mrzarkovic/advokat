@@ -15,27 +15,18 @@ class Pages extends Core {
 	}
 
 	/**
-	 * Show the homepage
-	 * @throws \Exception
-	 */
-	public function home() {
-		$this->template = "home";
-
-		return;
-	}
-
-	/**
 	 * Show a page for the language
 	 * @param string $lang
 	 * @param string $permalink
 	 */
 	public function show($lang = "", $permalink = "") {
 		if (isset($lang) && array_key_exists($lang, self::$availableLanguages)) {
-			// TODO: Resolve the requested page by permalink
 			$this->set_language($lang);
 			$this->template = "single-page";
 			$page = new Page();
-			$page = $page->getById($permalink);
+			$page = $page->getByPermalink($permalink, $lang);
+			$this->page_name = $page->get_language_title($lang);
+			$this->set_current_menu($page->id);
 			$this->to_tpl['lang'] = $lang;
 			$this->to_tpl['page'] = $page;
 		} else {

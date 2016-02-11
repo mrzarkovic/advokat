@@ -35,6 +35,12 @@ class Core {
 	public $page_name;
 
 	/**
+	 * Stores the page name for menu
+	 * @var string
+	 */
+	public static $current_menu;
+
+	/**
 	 * Stores template data
 	 * @var array
 	 */
@@ -67,14 +73,101 @@ class Core {
 		"en" => "English"
 	);
 
+	/**
+	 * Clients page titles
+	 * @var array
+	 */
+	public $clients_title = array(
+		"sr" => "Klijenti",
+		"en" => "Clients"
+	);
+
+	/**
+	 * Clients page urls
+	 * @var array
+	 */
+	public $clients_url = array(
+		"sr" => "/sr/klijenti",
+		"en" => "/en/clients"
+	);
+
+	/**
+	 * Services page titles
+	 * @var array
+	 */
+	public $services_title = array(
+		"sr" => "Usluge",
+		"en" => "Services"
+	);
+
+	/**
+	 * Services page urls
+	 * @var array
+	 */
+	public $services_url = array(
+		"sr" => "/sr/usluge",
+		"en" => "/en/services"
+	);
+
+	/**
+	 * Services page titles
+	 * @var array
+	 */
+	public $contact_title = array(
+		"sr" => "Kontakt",
+		"en" => "Contact"
+	);
+
+	/**
+	 * Services page urls
+	 * @var array
+	 */
+	public $contact_url = array(
+		"sr" => "/sr/kontakt",
+		"en" => "/en/contact"
+	);
+
+	public $localizator = array(
+		"clients" => array(
+			"en" => array(
+				"url" => "/en/clients",
+				"name" => "Clients"
+			),
+			"sr" => array(
+				"url" => "/sr/klijenti",
+				"name" => "Klijenti"
+			)
+		),
+		"services" => array(
+			"en" => array(
+				"url" => "/en/services",
+				"name" => "Services"
+			),
+			"sr" => array(
+				"url" => "/sr/usluge",
+				"name" => "Usluge"
+			)
+		),
+		"contact" => array(
+			"en" => array(
+				"url" => "/en/contact",
+				"name" => "Contact"
+			),
+			"sr" => array(
+				"url" => "/sr/kontakt",
+				"name" => "Kontakt"
+			)
+		),
+	);
+
 	public function __construct() {
 		$this->route = new \Route();
 		$this->to_tpl = array();
 		$this->msg_to_user = "";
 		$this->template = "";
 		static::$main_template = "main";
-		$this->site_name = "Attorney";
-		$this->page_name = "at Law";
+		$this->site_name = "Advokat Marinković";
+		$this->page_name = "";
 
 		// Set the footer year
 		$footer_year = new \DateTime("now");
@@ -87,6 +180,9 @@ class Core {
 
 		// Set the default language
 		$this->set_language("sr");
+
+		// TODO: PHPMailer with Gmail
+		// http://www.sitepoint.com/sending-emails-php-phpmailer/
 	}
 
 	/**
@@ -132,13 +228,22 @@ class Core {
 		return static::$language;
 	}
 
+	public function set_current_menu($current_menu = "") {
+		static::$current_menu = $current_menu;
+	}
+
+	public function get_current_menu() {
+		return static::$current_menu;
+	}
+
 	/**
 	 * Add a route to the Route object
 	 * @param string $route  URI
 	 * @param string $action Controller and method
+	 * @param array  $arguments
 	 */
-	public function add_route($route = "", $action = "") {
-		$this->route->add($route, $action);
+	public function add_route($route = "", $action = "", $arguments = array()) {
+		$this->route->add($route, $action, $arguments);
 	}
 
 	/**

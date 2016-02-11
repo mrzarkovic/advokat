@@ -35,3 +35,74 @@
 .tabbed-form.en .en_tab {
 	display: block;
 }
+
+.form-error {
+	padding: 5px 0;
+	margin-bottom: -10px;
+	color: #ff0000;
+}
+
+.form-error + .form-field {
+	border: 1px solid #ff0000;
+	padding: 5px;
+}
+
+.contact-message {
+	width: 300px;
+	height: 150px;
+	resize: vertical;
+}
+
+/* FORM FIELDS */
+
+.form-field {
+	margin: 10px 0;
+}
+
+.form-field input[type="text"],
+.form-field input[type="password"],
+.form-field input[type="email"] {
+	padding: 3px 5px;
+	width: 300px;
+	border: 1px solid #bbb;
+	border-radius: 3px;
+}
+
+.form-field label {
+	display: block;
+	padding: 5px 0;
+}
+
+.form-field textarea {
+	padding: 3px 5px;
+	max-width: 600px;
+	min-height: 100px;
+	border: 1px solid #bbb;
+	border-radius: 3px;
+}
+
+.form-field .image-preview {
+	padding: 10px 0;
+}
+
+.form-field .image-preview img {
+	width: 300px;
+	border-radius: 5px;
+}
+
+.form-field input[type="submit"],
+.form-field input[type="button"] {
+	border: 0;
+	padding: 5px 7px;
+	background: #007AF5;
+	border-radius: 3px;
+	color: #fff;
+}
+
+.form-field input[type="submit"]:hover,
+.form-field input[type="button"]:hover {
+	cursor: pointer;
+	background: #0069d1;
+}
+
+/* end of FORM FIELDS */

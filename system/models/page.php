@@ -2,8 +2,7 @@
 
 namespace Lamework\Model;
 
-if (!defined('BASEPATH'))
-	exit('No direct script access allowed');
+if (!defined('BASEPATH')) exit('No direct script access allowed');
 
 class Page extends Repository {
 	protected static $table_name = "pages";
@@ -12,6 +11,8 @@ class Page extends Repository {
 		"body_sr" => "string",
 		"title_en" => "string",
 		"body_en" => "string",
+		"permalink_sr" => "string",
+		"permalink_en" => "string",
 		"date_created" => "date",
 		"published" => "bool",
 		"order" => "int",
@@ -22,12 +23,23 @@ class Page extends Repository {
 	}
 
 	/**
+	 * @param $permalink
+	 * @param $lang
+	 * @return bool
+	 * @throws \Exception
+	 */
+	public function getByPermalink($permalink, $lang) {
+		return $this->getByFieldValue("permalink_" . $lang, $permalink);
+	}
+
+	/**
 	 * Get the URL for a language
 	 * @param string $lang
 	 * @return string
 	 */
 	public function get_language_url($lang = "") {
-		return "/" . $lang . "/" . $this->id;
+		$permalink_field = "permalink_" . $lang;
+		return "/" . $lang . "/" . $this->$permalink_field;
 	}
 
 	/**
@@ -37,6 +49,16 @@ class Page extends Repository {
 	 */
 	public function get_language_title($lang = "") {
 		$title_field = "title_" . $lang;
+		return $this->$title_field;
+	}
+
+	/**
+	 * Get the body for a language
+	 * @param string $lang
+	 * @return string
+	 */
+	public function get_language_body($lang = "") {
+		$title_field = "body_" . $lang;
 		return $this->$title_field;
 	}
 }
