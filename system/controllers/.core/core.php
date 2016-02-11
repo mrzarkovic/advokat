@@ -127,6 +127,39 @@ class Core {
 		"en" => "/en/contact"
 	);
 
+	public $localizator = array(
+		"clients" => array(
+			"en" => array(
+				"url" => "/en/clients",
+				"name" => "Clients"
+			),
+			"sr" => array(
+				"url" => "/sr/klijenti",
+				"name" => "Klijenti"
+			)
+		),
+		"services" => array(
+			"en" => array(
+				"url" => "/en/services",
+				"name" => "Services"
+			),
+			"sr" => array(
+				"url" => "/sr/usluge",
+				"name" => "Usluge"
+			)
+		),
+		"contact" => array(
+			"en" => array(
+				"url" => "/en/contact",
+				"name" => "Contact"
+			),
+			"sr" => array(
+				"url" => "/sr/kontakt",
+				"name" => "Kontakt"
+			)
+		),
+	);
+
 	public function __construct() {
 		$this->route = new \Route();
 		$this->to_tpl = array();
