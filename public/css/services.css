@@ -24,9 +24,22 @@ section#bookmarks a {
 	border-bottom: 1px solid #ccc;
 }
 
+
 section#bookmarks a:hover,
 section#bookmarks a.current {
 	color: #007AF5;
+}
+
+@media only screen and (max-width: 768px) {
+	#bookmarks {
+		display: none;
+	}
+	article.cell {
+		display: block !important;
+	}
+	article.cell:hover {
+		cursor: pointer;
+	}
 }
 /*
 article.collapsable {

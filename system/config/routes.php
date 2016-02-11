@@ -12,7 +12,8 @@ $core->add_route('/en/clients', 'listAll@Clients', array('en'));
 // Admin
 $core->add_route('/login', 'login@Logger');
 $core->add_route('/logout', 'logout@Logger');
-$core->add_route('/list-of-images', 'images_list@Admin_ajax');
+$core->add_route('/admin/list-of-images', 'images_list@Admin_ajax');
+$core->add_route('/admin/save-order/(:any)', 'save_order@Admin_ajax');
 $core->add_route('/admin', 'pages@Admin_pages');
 // Admin pages
 $core->add_route('/admin/manage-pages', 'pages@Admin_pages');

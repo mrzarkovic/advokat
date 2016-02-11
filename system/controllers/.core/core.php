@@ -73,21 +73,37 @@ class Core {
 		"en" => "English"
 	);
 
+	/**
+	 * Clients page titles
+	 * @var array
+	 */
 	public $clients_title = array(
 		"sr" => "Klijenti",
 		"en" => "Clients"
 	);
 
+	/**
+	 * Clients page urls
+	 * @var array
+	 */
 	public $clients_url = array(
 		"sr" => "/sr/klijenti",
 		"en" => "/en/clients"
 	);
 
+	/**
+	 * Services page titles
+	 * @var array
+	 */
 	public $services_title = array(
 		"sr" => "Usluge",
 		"en" => "Services"
 	);
 
+	/**
+	 * Services page urls
+	 * @var array
+	 */
 	public $services_url = array(
 		"sr" => "/sr/usluge",
 		"en" => "/en/services"
@@ -99,8 +115,8 @@ class Core {
 		$this->msg_to_user = "";
 		$this->template = "";
 		static::$main_template = "main";
-		$this->site_name = "Attorney";
-		$this->page_name = "at Law";
+		$this->site_name = "Advokat Marinković";
+		$this->page_name = "";
 
 		// Set the footer year
 		$footer_year = new \DateTime("now");

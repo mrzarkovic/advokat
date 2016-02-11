@@ -1,11 +1,16 @@
 <header class="header">
-	<div class="content clearfix">
+	<div class="wrapper content clearfix">
 		<a href="/" class="logo">
 			<?php echo $this->site_name; ?>
 		</a>
+		<div id="header-contact-info">
+			<h1>Kontakt</h1>
+			<b>Tel:</b> 063 453 835<br>
+			<b>Adresa:</b> Ustanička 12 ulaz 1<br>Beograd
+		</div>
 	</div>
 	<nav class="navigation main">
-		<ul class="clearfix">
+		<ul class="wrapper clearfix">
 			<?php foreach ($pages as $page) : ?>
 				<li>
 					<a href="<?php echo $page->get_language_url($this->get_language()); ?>" class="<?php current_menu($page->id, $this->get_current_menu()); ?>"><?php echo $page->get_language_title($this->get_language()); ?></a>

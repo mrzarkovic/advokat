@@ -35,6 +35,7 @@ class Pages extends Core {
 			$this->template = "single-page";
 			$page = new Page();
 			$page = $page->getByPermalink($permalink, $lang);
+			$this->page_name = $page->get_language_title($lang);
 			$this->set_current_menu($page->id);
 			$this->to_tpl['lang'] = $lang;
 			$this->to_tpl['page'] = $page;

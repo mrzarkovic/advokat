@@ -14,7 +14,7 @@
 		<?php foreach ($services as $service) : ?>
 			<article class="cell collapsable" data-value="<?php echo generate_permalink($service->get_language_title($lang)); ?>" style="display: none;">
 				<h1><?php echo $service->get_language_title($lang); ?></h1>
-				<p><?php echo $service->get_language_body($lang); ?></p>
+				<div><?php echo $service->get_language_body($lang); ?></div>
 			</article>
 		<?php endforeach; ?>
 	</div>
@@ -23,16 +23,33 @@
 	<?php endif; ?>
 </section>
 <script type="text/javascript">
-	jQuery(document).ready(function($) {
-		$('.collapsable').hide();
-		$('.collapsable').first().show();
-		$('.bookmark').click(function(e){
-			e.preventDefault();
-			var target = $(this).data("target");
+	$(window).resize(function() {
+		if ($(window).width() < 768) {
+			$('.collapsable').show();
+			$('.collapsable').find("div").hide();
+			$('.collapsable').click(function(){
+				$(this).find("div").toggle();
+			});
+			console.log("a");
+		}
+		else {
+			console.log("b");
 			$('.collapsable').hide();
-			$('.bookmark').removeClass("current");
-			$(this).addClass("current");
-			$("[data-value='"+target+"']").show();
-		});
+			$('.collapsable').first().show();
+			$('.collapsable').find("div").show();
+			$('.bookmark').click(function(e){
+				e.preventDefault();
+				var target = $(this).data("target");
+				$('.collapsable').hide();
+				$('.bookmark').removeClass("current");
+				$(this).addClass("current");
+				$("[data-value='"+target+"']").show();
+			});
+		}
 	});
+	$(window).trigger('resize');
+/*	jQuery(document).ready(function($) {
+
+	});
+	*/
 </script>

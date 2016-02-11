@@ -62,10 +62,10 @@ class Repository {
 	 * @throws \Exception
 	 * @return bool
 	 */
-	public function fetchAll() {
+	public function fetchAll($orderBy = "order") {
 		try {
 			// Prepare sql and bind parameters
-			$stmt = self::$db->prepare("SELECT * FROM " . static::$table_name);
+			$stmt = self::$db->prepare("SELECT * FROM " . static::$table_name . " ORDER BY `" . $orderBy . "` ASC");
 			if ($stmt->execute()) {
 				while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
 					$this->list[] = new static($row);
@@ -84,12 +84,13 @@ class Repository {
 	 * and save them in list array
 	 * @param string $field_name
 	 * @param string $value
+	 * @param string $orderBy
 	 * @return bool
 	 * @throws \Exception
 	 */
-	public function fetchAllByFieldValue($field_name = "", $value) {
+	public function fetchAllByFieldValue($field_name = "", $value, $orderBy = "order") {
 		try {
-			$stmt = self::$db->prepare("SELECT * FROM " . static::$table_name . " WHERE `" . $field_name . "`=:value");
+			$stmt = self::$db->prepare("SELECT * FROM " . static::$table_name . " WHERE `" . $field_name . "`=:value ORDER BY `" . $orderBy . "` ASC");
 			$stmt->bindParam(':value', $value, static::getPdoTypeByFieldName($field_name));
 			if ($stmt->execute()) {
 				while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {

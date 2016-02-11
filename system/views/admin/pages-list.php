@@ -5,8 +5,8 @@
 	<?php endif; ?>
 	<?php if (isset($pages) && !empty($pages)) : ?>
 	<ol class="pages-list">
-		<?php foreach ($pages as $page) : ?>
-			<li><a href="/admin/edit-page/<?php echo $page->id; ?>"><?php echo $page->title_sr; ?></a> (<?php echo ($page->published) ? "Objavljena" : "Skrivena"; ?>)<div class="admin-controls"><a href="/admin/delete-page/<?php echo $page->id; ?>" data-role="del">Obriši</a> | <a href="/admin/edit-page/<?php echo $page->id; ?>">Izmeni</a></div></li>
+		<?php $i = 0; foreach ($pages as $page) : $i++; ?>
+			<li><?php echo $i; ?>. <a href="/admin/edit-page/<?php echo $page->id; ?>"><?php echo $page->title_sr; ?></a> (<?php echo ($page->published) ? "Objavljena" : "Skrivena"; ?>)<div class="admin-controls"><a href="/admin/delete-page/<?php echo $page->id; ?>" data-role="del">Obriši</a> | <a href="/admin/edit-page/<?php echo $page->id; ?>">Izmeni</a></div></li>
 		<?php endforeach; ?>
 	</ol>
 	<?php else : ?>
