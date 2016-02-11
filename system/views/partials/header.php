@@ -22,6 +22,9 @@
 			<li>
 				<a href="<?php echo $this->clients_url[$this->get_language()]; ?>" class="<?php current_menu("clients", $this->get_current_menu()); ?>"><?php echo $this->clients_title[$this->get_language()]; ?></a>
 			</li>
+			<li>
+				<a href="<?php echo $this->contact_url[$this->get_language()]; ?>" class="<?php current_menu("contact", $this->get_current_menu()); ?>"><?php echo $this->contact_title[$this->get_language()]; ?></a>
+			</li>
 			<li class="language-item">
 				<a href="/sr">Sr</a>
 			</li>

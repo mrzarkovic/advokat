@@ -20,7 +20,7 @@ class Clients extends Core {
 	 * @param string $lang
 	 */
 	public function listAll($lang = "") {
-		$this->page_name = "Klijenti";
+		$this->page_name = $this->clients_title[$lang];
 		$this->set_current_menu("clients");
 		if (isset($lang) && array_key_exists($lang, self::$availableLanguages)) {
 			$this->set_language($lang);

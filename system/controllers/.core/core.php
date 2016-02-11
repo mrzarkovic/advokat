@@ -109,6 +109,24 @@ class Core {
 		"en" => "/en/services"
 	);
 
+	/**
+	 * Services page titles
+	 * @var array
+	 */
+	public $contact_title = array(
+		"sr" => "Kontakt",
+		"en" => "Contact"
+	);
+
+	/**
+	 * Services page urls
+	 * @var array
+	 */
+	public $contact_url = array(
+		"sr" => "/sr/kontakt",
+		"en" => "/en/contact"
+	);
+
 	public function __construct() {
 		$this->route = new \Route();
 		$this->to_tpl = array();

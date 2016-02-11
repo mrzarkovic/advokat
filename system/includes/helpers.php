@@ -143,7 +143,7 @@ function get_pages_images_list() {
  * @param array  $errors
  * @param string $placeholder
  */
-function generate_form_field($type = "text", $field_name = "name", $label_text = "", $value = "", $errors = array(), $placeholder = "") {
+function generate_form_field($type = "text", $field_name = "name", $label_text = "", $value = "", $errors = array(), $placeholder = "", $css_class = "") {
 	if (isset($_POST[$field_name])) {
 		$value = $_POST[$field_name];
 	}
@@ -161,9 +161,9 @@ function generate_form_field($type = "text", $field_name = "name", $label_text =
 	echo "<div class=\"form-field\">";
 	echo "<label for=\"" . $field_name . "\">" . $label_text . ":</label>";
 	if ($type == "text") {
-		echo "<input type=\"text\" name=\"" . $field_name . "\" id=\"" . $field_name . "\" placeholder=\"" . $placeholder . "\" value=\"" . $value . "\">";
+		echo "<input type=\"text\" name=\"" . $field_name . "\" id=\"" . $field_name . "\" placeholder=\"" . $placeholder . "\" value=\"" . $value . "\" class=\"" . $css_class . "\">";
 	} elseif ($type == "textarea") {
-		echo "<textarea name=\"" . $field_name . "\" id=\"" . $field_name . "\">$value</textarea>";
+		echo "<textarea name=\"" . $field_name . "\" id=\"" . $field_name . "\" class=\"" . $css_class . "\">$value</textarea>";
 	} elseif ($type == "file") {
 		if ($value) echo "<img src=\"/$value\" width=\"200\"><br>";
 		echo "<input type=\"file\" name=\"" . $field_name . "\" id=\"" . $field_name . "\">";

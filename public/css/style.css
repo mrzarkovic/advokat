@@ -190,51 +190,6 @@ nav ul li a.current {
 
 /* end of MAIN */
 
-/* FORM FIELDS */
-
-.form-field {
-	margin: 10px 0;
-}
-
-.form-field input[type="text"],
-.form-field input[type="password"],
-.form-field input[type="email"] {
-	padding: 3px 5px;
-	width: 300px;
-	border: 1px solid #bbb;
-	border-radius: 3px;
-}
-
-.form-field label {
-	display: block;
-	padding: 5px 0;
-}
-
-.form-field textarea {
-	padding: 3px 5px;
-	max-width: 600px;
-	width: 600px;
-	min-height: 200px;
-	border: 1px solid #bbb;
-	border-radius: 3px;
-}
-
-.form-field .image-preview {
-	padding: 10px 0;
-}
-
-.form-field .image-preview img {
-	width: 300px;
-	border-radius: 5px;
-}
-
-.contact .form-field textarea {
-	max-width: 500px;
-	min-height: 100px;
-}
-
-/* end of FORM FIELDS */
-
 /* ADMIN */
 
 .admin-submenu {

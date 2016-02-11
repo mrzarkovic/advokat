@@ -15,16 +15,6 @@ class Pages extends Core {
 	}
 
 	/**
-	 * Show the homepage
-	 * @throws \Exception
-	 */
-	public function home() {
-		$this->template = "home";
-
-		return;
-	}
-
-	/**
 	 * Show a page for the language
 	 * @param string $lang
 	 * @param string $permalink

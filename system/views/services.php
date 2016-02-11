@@ -24,19 +24,17 @@
 </section>
 <script type="text/javascript">
 	$(window).resize(function() {
+		var collapsable = $('.collapsable');
 		if ($(window).width() < 768) {
-			$('.collapsable').show();
-			$('.collapsable').find("div").hide();
-			$('.collapsable').click(function(){
+			collapsable.show();
+			collapsable.find("div").hide();
+			collapsable.click(function(){
 				$(this).find("div").toggle();
 			});
-			console.log("a");
-		}
-		else {
-			console.log("b");
-			$('.collapsable').hide();
-			$('.collapsable').first().show();
-			$('.collapsable').find("div").show();
+		} else {
+			collapsable.hide();
+			collapsable.first().show();
+			collapsable.find("div").show();
 			$('.bookmark').click(function(e){
 				e.preventDefault();
 				var target = $(this).data("target");

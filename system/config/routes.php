@@ -5,10 +5,12 @@ $core->add_route('/', 'show@Pages', array('sr', 'biografija'));
 $core->add_route('/sr', 'show@Pages', array('sr', 'biografija'));
 $core->add_route('/sr/usluge', 'listAll@Services', array('sr'));
 $core->add_route('/sr/klijenti', 'listAll@Clients', array('sr'));
+$core->add_route('/sr/kontakt', 'index@Contact', array('sr'));
 // English routes
 $core->add_route('/en', 'show@Pages', array('en', 'biography'));
 $core->add_route('/en/services', 'listAll@Services', array('en'));
 $core->add_route('/en/clients', 'listAll@Clients', array('en'));
+$core->add_route('/en/contact', 'index@Contact', array('en'));
 // Admin
 $core->add_route('/login', 'login@Logger');
 $core->add_route('/logout', 'logout@Logger');

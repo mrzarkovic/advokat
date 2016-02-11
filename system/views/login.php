@@ -1,3 +1,4 @@
+<link rel="stylesheet" type="text/css" href="/css/form.css"/>
 <section class="main content">
   <h1>Prijava na sistem</h1>
   <p class="notice">
