@@ -197,5 +197,5 @@ function generate_permalink($string = "") {
 }
 
 function current_menu ($page_name, $current_page) {
-	if ($page_name == $current_page) echo "current";
+	if ($page_name === $current_page) echo "current";
 }
