@@ -1,6 +1,8 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 session_start();
+// Config
+require_once(dirname(dirname(__FILE__)) . '/config.php');
 // Engines
 require_once(dirname(dirname(__FILE__)) . '/includes/route.php');
 // Helpers

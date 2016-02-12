@@ -44,10 +44,10 @@ class Repository {
 	 */
 	private static function connectToDb() {
 		// Database connection
-		$db_user = "root";
-		$db_pass = "";
-		$hostname = "localhost";
-		$db_name = "attorney";
+		$db_user = DB_USER;
+		$db_pass = DB_PASSWORD;
+		$hostname = DB_HOST;
+		$db_name = DB_NAME;
 
 		$db = new PDO('mysql:host=' . $hostname . ';dbname=' . $db_name . ';charset=utf8', $db_user, $db_pass);
 		// set the PDO error mode to exception

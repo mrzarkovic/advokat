@@ -62,9 +62,9 @@ class Contact extends Core {
 		//Whether to use SMTP authentication
 		$mail->SMTPAuth = true;
 		//Username to use for SMTP authentication - use full email address for gmail
-		$mail->Username = "mzarkovicm@gmail.com";
+		$mail->Username = EMAIL;
 		//Password to use for SMTP authentication
-		$mail->Password = "jdadtfvehsrvwicy";
+		$mail->Password = EMAIL_PASSWORD;
 		//Set who the message is to be sent from
 		$mail->setFrom('from@advokat.dev', 'Advokat Dev');
 		//Set an alternative reply-to address
