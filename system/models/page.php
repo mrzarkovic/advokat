@@ -31,34 +31,4 @@ class Page extends Repository {
 	public function getByPermalink($permalink, $lang) {
 		return $this->getByFieldValue("permalink_" . $lang, $permalink);
 	}
-
-	/**
-	 * Get the URL for a language
-	 * @param string $lang
-	 * @return string
-	 */
-	public function get_language_url($lang = "") {
-		$permalink_field = "permalink_" . $lang;
-		return "/" . $lang . "/" . $this->$permalink_field;
-	}
-
-	/**
-	 * Get the title for a language
-	 * @param string $lang
-	 * @return string
-	 */
-	public function get_language_title($lang = "") {
-		$title_field = "title_" . $lang;
-		return $this->$title_field;
-	}
-
-	/**
-	 * Get the body for a language
-	 * @param string $lang
-	 * @return string
-	 */
-	public function get_language_body($lang = "") {
-		$title_field = "body_" . $lang;
-		return $this->$title_field;
-	}
 }

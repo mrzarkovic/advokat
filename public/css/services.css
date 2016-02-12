@@ -40,6 +40,10 @@ section#bookmarks a.current {
 	article.cell:hover {
 		cursor: pointer;
 	}
+	.fluid-holder {
+		display: block;
+		margin: 0 10px;
+	}
 }
 /*
 article.collapsable {

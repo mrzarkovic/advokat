@@ -33,7 +33,7 @@ class Admin_pages extends Admin_controller {
 		$this->to_tpl['title'] = "";
 		$this->to_tpl['errors'] = false;
 		$this->template = "admin/add-page";
-
+		// TODO: https://css-tricks.com/serious-form-security/
 		if (isset($_POST['submit'])) {
 			$errors = $this->check_input();
 			if (is_array($errors) && !empty($errors)) {
@@ -44,6 +44,7 @@ class Admin_pages extends Admin_controller {
 				$page->body_sr = post_string('body_sr');
 				$page->title_en = post_string('title_en');
 				$page->body_en = post_string('body_en');
+				// TODO: Check if permalink exists
 				$page->permalink_sr = generate_permalink($page->title_sr);
 				$page->permalink_en = generate_permalink($page->title_en);
 				$page->date_created = new \DateTime("now");

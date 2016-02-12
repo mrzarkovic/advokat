@@ -22,17 +22,19 @@ class Pages extends Core {
 	public function show($lang = "", $permalink = "") {
 		if (isset($lang) && array_key_exists($lang, self::$availableLanguages)) {
 			$this->set_language($lang);
-			$this->template = "single-page";
 			$page = new Page();
 			$page = $page->getByPermalink($permalink, $lang);
-			$this->page_name = $page->get_language_title($lang);
-			$this->set_current_menu($page->id);
-			$this->to_tpl['lang'] = $lang;
-			$this->to_tpl['page'] = $page;
-		} else {
-			$this->to_tpl['error'] = "Stranica ne postoji.";
-			$this->template = "404";
+			if ($page->id != 0) {
+				$this->template = "single-page";
+				$title_field = "title_" . $lang;
+				$this->set_page_name($page->$title_field);
+				$this->to_tpl['page'] = $page;
+				return;
+			}
 		}
+
+		$this->to_tpl['error'] = "Stranica ne postoji.";
+		$this->template = "404";
 		return;
 	}
 

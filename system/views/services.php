@@ -18,9 +18,6 @@
 			</article>
 		<?php endforeach; ?>
 	</div>
-	<?php else : ?>
-		<p>Trenutno nema dodatih usluga.</p>
-	<?php endif; ?>
 </section>
 <script type="text/javascript">
 	$(window).resize(function() {
@@ -46,8 +43,13 @@
 		}
 	});
 	$(window).trigger('resize');
-/*	jQuery(document).ready(function($) {
+	/*	jQuery(document).ready(function($) {
 
-	});
-	*/
+	 });
+	 */
 </script>
+<?php else : ?>
+<section class="main content">
+	<p>Trenutno nema dodatih usluga.</p>
+</section>
+<?php endif; ?>

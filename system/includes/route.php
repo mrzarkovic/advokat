@@ -52,7 +52,11 @@ class Route {
 	 */
 	public function resolve() {
 		//$uri = isset($_REQUEST['uri']) ? '/' .$_REQUEST['uri'] : '/';
-		$uri = isset($_SERVER['REQUEST_URI']) ? $_SERVER['REQUEST_URI'] : '/';
+		if (isset($_SERVER['REQUEST_URI'])) {
+			$uri = ($_SERVER['REQUEST_URI'] != "/") ? rtrim($_SERVER['REQUEST_URI'], '/') : $_SERVER['REQUEST_URI'];
+		} else {
+			$uri = '/';
+		}
 
 		//$uri_segments = $this->_explode_segments($uri);
 		$function_arguments = array();

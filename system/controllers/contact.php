@@ -19,14 +19,13 @@ class Contact extends Core {
 	public function index($lang = "") {
 		$this->to_tpl['errors'] = array();
 		$this->to_tpl['msg'] = "";
-		$this->page_name = $this->contact_title[$lang];
 		$this->set_language($lang);
 		if ($lang == "sr") {
 			$this->template = "contact-sr";
 		} else {
 			$this->template = "contact-en";
 		}
-		$this->set_current_menu("contact");
+		$this->set_page_name($this->language_titles["contact"][$lang]);
 
 		if (isset($_POST['submit'])) {
 			$this->to_tpl['msg'] = $this->phpmailer();
