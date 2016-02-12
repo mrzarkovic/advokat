@@ -44,6 +44,7 @@ class Admin_pages extends Admin_controller {
 				$page->body_sr = post_string('body_sr');
 				$page->title_en = post_string('title_en');
 				$page->body_en = post_string('body_en');
+				// TODO: Check if permalink exists
 				$page->permalink_sr = generate_permalink($page->title_sr);
 				$page->permalink_en = generate_permalink($page->title_en);
 				$page->date_created = new \DateTime("now");

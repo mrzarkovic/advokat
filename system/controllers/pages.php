@@ -26,9 +26,8 @@ class Pages extends Core {
 			$page = $page->getByPermalink($permalink, $lang);
 			if ($page->id != 0) {
 				$this->template = "single-page";
-				$this->page_name = $page->get_language_title($lang);
-				$this->set_current_menu($page->id);
-				$this->to_tpl['lang'] = $lang;
+				$title_field = "title_" . $lang;
+				$this->set_page_name($page->$title_field);
 				$this->to_tpl['page'] = $page;
 				return;
 			}

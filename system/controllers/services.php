@@ -20,8 +20,7 @@ class Services extends Core {
 	 * @param string $lang
 	 */
 	public function listAll($lang = "") {
-		$this->page_name = $this->services_title[$lang];;
-		$this->set_current_menu("services");
+		$this->set_page_name($this->language_titles["services"][$lang]);
 		if (isset($lang) && array_key_exists($lang, self::$availableLanguages)) {
 			$this->set_language($lang);
 			$this->template = "services";

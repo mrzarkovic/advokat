@@ -196,6 +196,13 @@ function generate_permalink($string = "") {
 	return $string;
 }
 
-function current_menu ($page_name, $current_page) {
-	if ($page_name === $current_page) echo "current";
+/**
+ * Return css class current if active page
+ * @param $page_name
+ * @param $current_page
+ * @return string
+ */
+function check_current_menu($page_name, $current_page) {
+	if ($page_name === $current_page) return "current";
+	else return "";
 }

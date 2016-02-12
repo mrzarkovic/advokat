@@ -1,6 +1,6 @@
 <header class="header">
 	<div class="wrapper content clearfix">
-		<a href="/" class="logo">
+		<a href="/<?php echo $this->get_language(); ?>" class="logo">
 			<?php echo $this->site_name; ?>
 		</a>
 		<div id="header-contact-info">
@@ -13,17 +13,19 @@
 		<ul class="wrapper clearfix">
 			<?php foreach ($pages as $page) : ?>
 				<li>
-					<a href="<?php echo $page->get_language_url($this->get_language()); ?>" class="<?php current_menu($page->id, $this->get_current_menu()); ?>"><?php echo $page->get_language_title($this->get_language()); ?></a>
+					<?php
+					$title_field = "title_" . $this->get_language();
+					$this->get_menu_link($page->$title_field); ?>
 				</li>
 			<?php endforeach; ?>
 			<li>
-				<a href="<?php echo $this->localizator['services'][$this->get_language()]['url']; ?>" class="<?php current_menu("services", $this->get_current_menu()); ?>"><?php echo $this->localizator['services'][$this->get_language()]['name']; ?></a>
+				<?php $this->get_menu_link($this->language_titles["services"][$this->get_language()]); ?>
 			</li>
 			<li>
-				<a href="<?php echo $this->clients_url[$this->get_language()]; ?>" class="<?php current_menu("clients", $this->get_current_menu()); ?>"><?php echo $this->clients_title[$this->get_language()]; ?></a>
+				<?php $this->get_menu_link($this->language_titles["clients"][$this->get_language()]); ?>
 			</li>
 			<li>
-				<a href="<?php echo $this->contact_url[$this->get_language()]; ?>" class="<?php current_menu("contact", $this->get_current_menu()); ?>"><?php echo $this->contact_title[$this->get_language()]; ?></a>
+				<?php $this->get_menu_link($this->language_titles["contact"][$this->get_language()]); ?>
 			</li>
 			<li class="language-item">
 				<a href="/en">En</a>

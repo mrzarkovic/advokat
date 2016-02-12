@@ -32,7 +32,7 @@ class Core {
 	 * Stores the page name
 	 * @var string
 	 */
-	public $page_name;
+	public static $page_name;
 
 	/**
 	 * Stores the page name for menu
@@ -74,89 +74,21 @@ class Core {
 	);
 
 	/**
-	 * Clients page titles
+	 * Custom pages language titles
 	 * @var array
 	 */
-	public $clients_title = array(
-		"sr" => "Klijenti",
-		"en" => "Clients"
-	);
-
-	/**
-	 * Clients page urls
-	 * @var array
-	 */
-	public $clients_url = array(
-		"sr" => "/sr/klijenti",
-		"en" => "/en/clients"
-	);
-
-	/**
-	 * Services page titles
-	 * @var array
-	 */
-	public $services_title = array(
-		"sr" => "Usluge",
-		"en" => "Services"
-	);
-
-	/**
-	 * Services page urls
-	 * @var array
-	 */
-	public $services_url = array(
-		"sr" => "/sr/usluge",
-		"en" => "/en/services"
-	);
-
-	/**
-	 * Services page titles
-	 * @var array
-	 */
-	public $contact_title = array(
-		"sr" => "Kontakt",
-		"en" => "Contact"
-	);
-
-	/**
-	 * Services page urls
-	 * @var array
-	 */
-	public $contact_url = array(
-		"sr" => "/sr/kontakt",
-		"en" => "/en/contact"
-	);
-
-	public $localizator = array(
+	public $language_titles = array(
 		"clients" => array(
-			"en" => array(
-				"url" => "/en/clients",
-				"name" => "Clients"
-			),
-			"sr" => array(
-				"url" => "/sr/klijenti",
-				"name" => "Klijenti"
-			)
+			"sr" => "Klijenti",
+			"en" => "Clients"
 		),
-		"services" => array(
-			"en" => array(
-				"url" => "/en/services",
-				"name" => "Services"
-			),
-			"sr" => array(
-				"url" => "/sr/usluge",
-				"name" => "Usluge"
-			)
+		"services"=> array(
+			"sr" => "Usluge",
+			"en" => "Services"
 		),
-		"contact" => array(
-			"en" => array(
-				"url" => "/en/contact",
-				"name" => "Contact"
-			),
-			"sr" => array(
-				"url" => "/sr/kontakt",
-				"name" => "Kontakt"
-			)
+		"contact"=> array(
+			"sr" => "Kontakt",
+			"en" => "Contact"
 		),
 	);
 
@@ -167,7 +99,6 @@ class Core {
 		$this->template = "";
 		static::$main_template = "main";
 		$this->site_name = "Advokat Marinković";
-		$this->page_name = "";
 
 		// Set the footer year
 		$footer_year = new \DateTime("now");
@@ -180,9 +111,6 @@ class Core {
 
 		// Set the default language
 		$this->set_language("sr");
-
-		// TODO: PHPMailer with Gmail
-		// http://www.sitepoint.com/sending-emails-php-phpmailer/
 	}
 
 	/**
@@ -228,12 +156,32 @@ class Core {
 		return static::$language;
 	}
 
-	public function set_current_menu($current_menu = "") {
-		static::$current_menu = $current_menu;
+	/**
+	 * Name of the item
+	 * @param string $name
+	 */
+	public function get_menu_link($name = ""){
+		$url = generate_permalink($name);
+		$lang = static::$language;
+		$current_page = static::$page_name;
+		$class = check_current_menu($name, $current_page);
+		echo "<a href=\"/$lang/$url\" class=\"$class\">$name</a>";
 	}
 
-	public function get_current_menu() {
-		return static::$current_menu;
+	/**
+	 * Set the page name
+	 * @param string $page_name
+	 */
+	public function set_page_name($page_name = "") {
+		static::$page_name = $page_name;
+	}
+
+	/**
+	 * Get the page name
+	 * @return string
+	 */
+	public function get_page_name() {
+		return static::$page_name;
 	}
 
 	/**
@@ -270,7 +218,7 @@ class Core {
 			$this->template = $class->template;
 		}
 		// Set the page title
-		$this->title = $this->site_name . " | " . $class->page_name;
+		$this->title = $this->site_name . " | " . static::$page_name;
 		// Set the message for a user
 		$this->msg_to_user = $class->msg_to_user;
 		// Load the main template
