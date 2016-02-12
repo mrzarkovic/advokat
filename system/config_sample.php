@@ -7,4 +7,4 @@ define("DB_NAME", "databasename");
 
 // PHPMailer
 define("EMAIL", "email@gmail.com");
-define("EMAIL_PASSWORD", "email_password");
+define("EMAIL_PASSWORD", "email_pass");
