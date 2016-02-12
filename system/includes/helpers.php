@@ -161,9 +161,9 @@ function generate_form_field($type = "text", $field_name = "name", $label_text =
 	echo "<div class=\"form-field\">";
 	echo "<label for=\"" . $field_name . "\">" . $label_text . ":</label>";
 	if ($type == "text") {
-		echo "<input type=\"text\" name=\"" . $field_name . "\" id=\"" . $field_name . "\" placeholder=\"" . $placeholder . "\" value=\"" . $value . "\" class=\"" . $css_class . "\">";
+		echo "<input type=\"text\" name=\"" . $field_name . "\" id=\"" . $field_name . "\" placeholder=\"" . $placeholder . "\" value=\"" . htmlentities($value) . "\" class=\"" . $css_class . "\">";
 	} elseif ($type == "textarea") {
-		echo "<textarea name=\"" . $field_name . "\" id=\"" . $field_name . "\" class=\"" . $css_class . "\">$value</textarea>";
+		echo "<textarea name=\"" . $field_name . "\" id=\"" . $field_name . "\" class=\"" . $css_class . "\">" . ($value) . "</textarea>";
 	} elseif ($type == "file") {
 		if ($value) echo "<img src=\"/$value\" width=\"200\"><br>";
 		echo "<input type=\"file\" name=\"" . $field_name . "\" id=\"" . $field_name . "\">";
@@ -205,4 +205,113 @@ function generate_permalink($string = "") {
 function check_current_menu($page_name, $current_page) {
 	if ($page_name === $current_page) return "current";
 	else return "";
+}
+
+/**
+ * Generate a form token
+ * @param $form
+ * @return string
+ */
+function generate_form_token($form) {
+	// Generate a token from an unique value
+	$token = md5(uniqid(microtime(), true));
+
+	// Write the generated token to the session variable
+	// to check it against the hidden field when the form is sent
+	$_SESSION[$form . '_token'] = $token;
+
+	return $token;
+}
+
+/**
+ * Verify the form token
+ * @param $form
+ * @return bool
+ */
+function verify_form_token($form) {
+	// Check if a session is started and a token is transmitted,
+	// if not return an error
+	if(!isset($_SESSION[$form.'_token'])) {
+		return false;
+	}
+
+	// Check if the form is sent with token in it
+	if(!isset($_POST['token'])) {
+		return false;
+	}
+
+	// Compare the tokens against each other if they are still the same
+	if ($_SESSION[$form . '_token'] !== $_POST['token']) {
+		return false;
+	}
+
+	return true;
+}
+
+/**
+ * Use: Anything that shouldn't contain html
+ * (pretty much everything that is not a textarea)
+ * @param $s
+ * @return string
+ */
+function stripcleantohtml($s){
+	// Restores the added slashes (ie.: " I\'m John "
+	// for security in output, and escapes them in htmlentities(ie.:  &quot; etc.)
+	// Also strips any <html> tags it may encounter
+	return htmlentities(trim(strip_tags(stripslashes($s))), ENT_NOQUOTES, "UTF-8");
+}
+
+/**
+ * Use: For input fields that may contain html, like a textarea
+ * @param $s
+ * @return string
+ */
+function cleantohtml($s){
+	// Restores the added slashes (ie.: " I\'m John "
+	// for security in output, and escapes them in htmlentities(ie.:  &quot; etc.)
+	// It preserves any <html> tags in that they are encoded aswell (like &lt;html&gt;)
+	// As an extra security, if people would try to inject tags that would become tags
+	// after stripping away bad characters, we do still strip tags but only after htmlentities,
+	// so any genuine code examples will stay
+	return strip_tags(htmlentities(trim(stripslashes($s)), ENT_NOQUOTES, "UTF-8"));
+}
+
+/**
+ * Write to log file
+ * @param $where
+ */
+function write_log($where) {
+
+	$ip = $_SERVER["REMOTE_ADDR"]; // Get the IP from superglobal
+	$host = gethostbyaddr($ip);    // Try to locate the host of the attack
+	$date = date("d M Y");
+
+	// create a logging message with php heredoc syntax
+	$logging = <<<LOG
+		\n
+		<< Start of Message >>
+		There was a hacking attempt on your form. \n
+		Date of Attack: {$date}
+		IP-Adress: {$ip} \n
+		Host of Attacker: {$host}
+		Point of Attack: {$where}
+		<< End of Message >>
+LOG;
+
+	// open log file
+	if($handle = fopen(BASEPATH . '/hacklog.log', 'a')) {
+
+		fputs($handle, $logging);  // write the Data to file
+		fclose($handle);           // close the file
+
+	} else {  // if first method is not working, for example because of wrong file permissions, email the data
+
+		$to = 'ADMIN@gmail.com';
+		$subject = 'HACK ATTEMPT';
+		$header = 'From: ADMIN@gmail.com';
+		if (mail($to, $subject, $logging, $header)) {
+			echo "Sent notice to admin.";
+		}
+
+	}
 }
