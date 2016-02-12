@@ -4,6 +4,9 @@
 	<b>Mobile tel.:</b> +38163 453 835<br>
 	<b>Address:</b> Ustanicka street, 12 entrance 1, 11000 Belgrade<br>
 	<b>E mail:</b> <img src="http://www.advokatmarinkovic.rs/wp-content/uploads/2014/08/mail-w.png" alt="mail-w" width="211" height="14" class="email-img">
+	<?php if (isset($success) && $success == true) : ?>
+		<div class="alert alert-success">Message has been sent. Thank you!</div>
+	<?php endif; ?>
 	<form name="contact" action="/sr/kontakt" method="post">
 		<input type="hidden" name="token" value="<?php echo $token; ?>">
 		<?php generate_form_field("text", "name", "Your name", "", $errors, "Your name"); ?>
