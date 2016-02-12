@@ -33,7 +33,7 @@ class Admin_pages extends Admin_controller {
 		$this->to_tpl['title'] = "";
 		$this->to_tpl['errors'] = false;
 		$this->template = "admin/add-page";
-
+		// TODO: https://css-tricks.com/serious-form-security/
 		if (isset($_POST['submit'])) {
 			$errors = $this->check_input();
 			if (is_array($errors) && !empty($errors)) {
