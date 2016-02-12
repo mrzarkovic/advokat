@@ -31,4 +31,26 @@ class Page extends Repository {
 	public function getByPermalink($permalink, $lang) {
 		return $this->getByFieldValue("permalink_" . $lang, $permalink);
 	}
+
+	/**
+	 * Get the next available permalink
+	 * @param $permalink
+	 * @param $lang
+	 * @param $i
+	 * @return string
+	 */
+	public function check_permalink($permalink = "", $lang = "", $i = 0) {
+		if ($i != 0) {
+			$new_permalink = $permalink . "-" . $i;
+		} else {
+			$new_permalink = $permalink;
+		}
+		$check = $this->getByPermalink($new_permalink, $lang);
+		if ($check->id && $check->id != $this->id) {
+			$i++;
+			return $this->check_permalink($permalink, $lang, $i);
+		} else {
+			return $new_permalink;
+		}
+	}
 }

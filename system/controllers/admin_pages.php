@@ -45,8 +45,8 @@ class Admin_pages extends Admin_controller {
 				$page->title_en = post_string('title_en');
 				$page->body_en = post_string('body_en');
 				// TODO: Check if permalink exists
-				$page->permalink_sr = generate_permalink($page->title_sr);
-				$page->permalink_en = generate_permalink($page->title_en);
+				$page->permalink_sr = $page->check_permalink(generate_permalink($page->title_sr), "sr");
+				$page->permalink_en = $page->check_permalink(generate_permalink($page->title_en), "en");
 				$page->date_created = new \DateTime("now");
 				$page->published = post_bool('published');
 				if ($id = $page->saveToDb()) {
@@ -83,8 +83,8 @@ class Admin_pages extends Admin_controller {
 					$page->body_sr = post_string('body_sr');
 					$page->title_en = post_string('title_en');
 					$page->body_en = post_string('body_en');
-					$page->permalink_sr = generate_permalink($page->title_sr);
-					$page->permalink_en = generate_permalink($page->title_en);
+					$page->permalink_sr = $page->check_permalink(generate_permalink($page->title_sr), "sr");
+					$page->permalink_en = $page->check_permalink(generate_permalink($page->title_en), "en");
 					$page->date_created = new \DateTime("now");
 					$page->published = post_bool('published');
 					if ($page->updateInDb()) {
