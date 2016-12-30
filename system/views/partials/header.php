@@ -9,7 +9,7 @@
 			<b>Adresa:</b> Ustanička 12 ulaz 1<br>Beograd
 		</div>
 	</div>
-	<nav class="navigation">
+	<nav class="navigation" id="navigation">
 		<ul class="wrapper clearfix">
 			<?php foreach ($pages as $page) : ?>
 				<li>
@@ -42,6 +42,13 @@
 				<?php
 			}
 			?>
+			<li class="clearfix"></li>
+			<li class="mobile-nav" id="mobile-menu"><a href="javascript:;">Meni</a></li>
 		</ul>
 	</nav>
 </header>
+<script type="text/javascript">
+$("#navigation").click(function() {
+	$("#navigation").toggleClass("open");
+});
+</script>

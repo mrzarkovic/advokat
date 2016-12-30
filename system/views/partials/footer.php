@@ -5,6 +5,6 @@
 		11000 Beograd<br>
 		tel.  +38111 3442717
 		mob.tel. +38163 453 835
-		e-mail: <img src="http://www.advokatmarinkovic.rs/sr_RS/../images/mail-b.png" class="email-img">
+		e-mail: <img src="/img/mail-b.png" class="email-img">
 	</div>
 </footer>

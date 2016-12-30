@@ -1,10 +1,10 @@
-CREATE TABLE `attorney`.`users` (
+CREATE TABLE users (
   `id` INT NOT NULL AUTO_INCREMENT,
   `username` VARCHAR(255) NULL,
   `password` VARCHAR(255) NULL,
   PRIMARY KEY (`id`));
 
-CREATE TABLE attorney.pages (
+CREATE TABLE pages (
   `id` INT PRIMARY KEY AUTO_INCREMENT,
   `title_sr` VARCHAR(255),
   `title_en` VARCHAR(255),
@@ -17,7 +17,7 @@ CREATE TABLE attorney.pages (
   `order` INT(3)
 );
 
-CREATE TABLE attorney.services (
+CREATE TABLE services (
   `id` INT PRIMARY KEY AUTO_INCREMENT,
   `title_sr` VARCHAR(255),
   `title_en` VARCHAR(255),
@@ -28,7 +28,7 @@ CREATE TABLE attorney.services (
   `order` INT(3)
 );
 
-CREATE TABLE attorney.clients (
+CREATE TABLE clients (
   `id` INT PRIMARY KEY AUTO_INCREMENT,
   `name_sr` VARCHAR(255),
   `name_en` VARCHAR(255),

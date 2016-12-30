@@ -25,7 +25,7 @@
 		if ($(window).width() < 768) {
 			collapsable.show();
 			collapsable.find("div").hide();
-			collapsable.click(function(){
+			collapsable.on("touchend", function(){
 				$(this).find("div").toggle();
 			});
 		} else {

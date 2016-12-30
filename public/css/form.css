@@ -68,6 +68,24 @@
 	border-radius: 3px;
 }
 
+@media only screen and (max-width: 768px) {
+	.form-field input[type="text"],
+	.form-field input[type="password"],
+	.form-field input[type="email"] {
+		padding: 3px 5px;
+		max-width: 300px;
+		width: 100%;
+		border: 1px solid #bbb;
+		border-radius: 3px;
+	}
+
+	.form-field textarea {
+		width: 100%;
+		max-width: 300px !important;
+	}
+
+}
+
 .form-field label {
 	display: block;
 	padding: 5px 0;
