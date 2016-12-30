@@ -30,21 +30,6 @@ section#bookmarks a.current {
 	color: #007AF5;
 }
 
-@media only screen and (max-width: 768px) {
-	#bookmarks {
-		display: none;
-	}
-	article.cell {
-		display: block !important;
-	}
-	article.cell:hover {
-		cursor: pointer;
-	}
-	.fluid-holder {
-		display: block;
-		margin: 0 10px;
-	}
-}
 /*
 article.collapsable {
 	float: left;
@@ -59,4 +44,30 @@ article.cell {
 	border-bottom: 2px solid #007AF5;
 	border-radius: 5px;
 	box-shadow: 0 0px 10px rgba(0,0,0,.2);
+}
+
+
+@media only screen and (max-width: 768px) {
+	#bookmarks {
+		display: none;
+	}
+	article.cell > div {
+		display: none;
+	}
+	article.cell.open > div {
+		display: block;
+	}
+	article.cell.open h1 {
+		margin-bottom: 10px;
+	}
+	article.cell > h1 {
+		margin: 0;
+	}
+	article.cell {
+		display: block !important;
+	}
+	.fluid-holder {
+		display: block;
+		margin: 0 10px;
+	}
 }

@@ -13,7 +13,7 @@
 		</section>
 		<?php foreach ($services as $service) : ?>
 			<article class="cell collapsable" data-value="<?php echo generate_permalink($service->get_language_title($lang)); ?>" style="display: none;">
-				<h1><?php echo $service->get_language_title($lang); ?></h1>
+				<h1><a href="javascript:;" class="trigger"><?php echo $service->get_language_title($lang); ?></a></h1>
 				<div><?php echo $service->get_language_body($lang); ?></div>
 			</article>
 		<?php endforeach; ?>
@@ -24,9 +24,12 @@
 		var collapsable = $('.collapsable');
 		if ($(window).width() < 768) {
 			collapsable.show();
-			collapsable.find("div").hide();
-			collapsable.on("touchend", function(){
+			//collapsable.find("div").hide();
+			/*collapsable.on("touchend", function(){
 				$(this).find("div").toggle();
+			});*/
+			$(".trigger").click(function() {
+				$(this).closest(".cell").toggleClass("open");
 			});
 		} else {
 			collapsable.hide();
