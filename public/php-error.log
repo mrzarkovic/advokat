@@ -62,3 +62,7 @@
 [30-Dec-2016 16:52:32 Europe/Berlin] Hello, errors!
 [30-Dec-2016 16:52:32 Europe/Berlin] Hello, errors!
 [30-Dec-2016 16:52:32 Europe/Berlin] Hello, errors!
+[17-Feb-2017 13:38:56 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\advokat\system/config.php): failed to open stream: No such file or directory in C:\xampp\htdocs\advokat\system\includes\start-up.php on line 5
+[17-Feb-2017 13:38:56 Europe/Berlin] PHP Fatal error:  require_once(): Failed opening required 'C:\xampp\htdocs\advokat\system/config.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\advokat\system\includes\start-up.php on line 5
+[17-Feb-2017 13:38:56 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\advokat\system/config.php): failed to open stream: No such file or directory in C:\xampp\htdocs\advokat\system\includes\start-up.php on line 5
+[17-Feb-2017 13:38:56 Europe/Berlin] PHP Fatal error:  require_once(): Failed opening required 'C:\xampp\htdocs\advokat\system/config.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\advokat\system\includes\start-up.php on line 5

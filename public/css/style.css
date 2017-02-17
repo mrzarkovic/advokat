@@ -116,7 +116,8 @@ article > h1 a {
 	color: inherit;
 }
 
-article.page-text {
+article.page-text p {
+	padding: 10px 0;
 	/*text-align: justify;*/
 }
 
