@@ -27,6 +27,9 @@
 			<li>
 				<?php $this->get_menu_link($this->language_titles["contact"][$this->get_language()]); ?>
 			</li>
+			<li class="language-item desktop">
+				<a href="https://www.linkedin.com/in/jovan-marinkovic-20098316/" class="linked-in-icon"><img src="/img/linkedin-29.png"></a>
+			</li>
 			<li class="language-item">
 				<a href="/en">En</a>
 			</li>
@@ -43,12 +46,13 @@
 			}
 			?>
 			<li class="clearfix"></li>
-			<li class="mobile-nav" id="mobile-menu"><a href="javascript:;">Meni</a></li>
+			<li class="mobile-nav"><a href="javascript:;" id="mobile-menu">Meni</a><a href="https://www.linkedin.com/in/jovan-marinkovic-20098316/" class="linked-in-icon"><img src="/img/linkedin-29.png"></a></li>
 		</ul>
 	</nav>
 </header>
 <script type="text/javascript">
-$("#navigation").click(function() {
+$("#mobile-menu").click(function(evt) {
+	evt.preventDefault();
 	$("#navigation").toggleClass("open");
 });
 </script>

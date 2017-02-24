@@ -1,8 +1,9 @@
-@import url(https://fonts.googleapis.com/css?family=Lora&subset=latin,latin-ext);
+/* @import url(https://fonts.googleapis.com/css?family=Lora&subset=latin,latin-ext); */
+@import url('https://fonts.googleapis.com/css?family=Roboto');
 
 *, html, body {
 	/*font-family: 'Asap', sans-serif;*/
-	font-family: 'Lora', serif;
+	font-family: 'Roboto', serif;
 	color: #333;
 	font-size: 16px;
 	padding: 0;
@@ -148,6 +149,7 @@ nav ul {
 }
 
 nav.navigation ul li {
+	position: relative;
 	display: block;
 	float: left;
 	margin-right: 5px;
@@ -166,10 +168,16 @@ nav ul li.admin-login {
 }
 
 nav ul li a {
+	position: relative;
 	display: block;
-	padding: 5px 10px;
+	padding: 8px 10px;
 	color: #fff;
 	border-radius: 3px;
+}
+
+.linked-in-icon {
+	margin-top: 3px;
+	padding: 0;
 }
 
 nav ul li a:hover,
@@ -440,6 +448,9 @@ nav ul li a.current {
 }
 
 @media only screen and (max-width: 768px) {
+	.desktop {
+		display: none !important;
+	}
 	#header-contact-info {
 		display: none;
 	}
@@ -447,7 +458,7 @@ nav ul li a.current {
 		margin-left: 0;
 	}
 	article.page-text {
-		text-align: justify;
+		/* text-align: justify; */
 	}
 	.main {
 		margin: 0 10px;
@@ -470,6 +481,16 @@ nav ul li a.current {
 	nav.navigation.open ul li {
 		display: block;
 		float: none;
+	}
+	
+	.linked-in-icon {
+		position: absolute;
+		top: 0;
+		right: 0;
+		color: #fff;
+		z-index: 100;
+		padding: 0;
+		margin-top: 2px;
 	}
 
 	nav.navigation ul li.language-item {
